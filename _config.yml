@@ -1,11 +1,11 @@
 # Site settings
 title: Xiao Daxia
 SEOTitle: 萧大侠的博客 | XDX Blog
-header-img: img/home-bg.jpg
+header-img: img/bg_classic_white.jpg
 email: xiaozisheng2008@qq.com
 description: "逐日剑客&愁容骑士 | 萧大侠，Software Engineer，UX Designer | 这里是 @XDX萧大侠 的个人博客，与你一起发现更大的世界。"
 keyword: "萧大侠, XDX, 萧大侠的博客, XDX Blog, 博客, 个人网站, 互联网"
-url: "https://huangxuan.me"              # your host, for absolute URL
+url: "https://xiaodaxia-2008.github.io"              # your host, for absolute URL
 baseurl: ""                             # for example, '/blog' if your blog hosted on 'host/blog'
 
 # Publish posts or collection documents with a future date.
@@ -13,8 +13,8 @@ future: true
 
 # SNS settings
 RSS: false
-weibo_username:     xiaozisheng2008@sina.com
-zhihu_username:     墨妍
+weibo_username:     1560557545
+zhihu_username:     mo-yan-41-89
 github_username:    xiaodaxia-2008
 # twitter_username:   huxpro
 #facebook_username:  huxpro
@@ -102,35 +102,8 @@ page-mathjax: false
 
 # Friends
 friends: [
-    {
+    # {
     #     title: "Su",
     #     href: "http://su.gallery/"
-    # },{
-        title: "乱序",
-        href: "http://mida.re/"
-    },{
-        title: "Sherry Wu",
-        href: "https://xuechundesign.github.io"
-    },{
-        title: "Luke 的自留地",
-        href: "http://hmqk1995.github.io"
-    },{
-        title: "Ebn's Blog",
-        href: "http://ebnbin.com/"
-    },{
-        title: "SmdCn's Blog",
-        href: "http://blog.smdcn.net"
-    },{
-        title: "JiyinYiyong",
-        href: "http://tiye.me/"
-    },{
-        title: "David's Game",
-        href: "https://www.ruoyaowu.com/"
-    },{
-        title: "DHong Say",
-        href: "http://dhong.co"
-    },{
-        title: "尹峰以为",
-        href: "http://ingf.github.io/"
-    }
+    # },
 ]
