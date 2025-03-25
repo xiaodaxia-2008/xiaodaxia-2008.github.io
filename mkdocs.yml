@@ -1,6 +1,6 @@
-site_name: Shawn 的博客
+site_name: Zen
 site_url: https://blog.myshawn.com
-site_description: "Shawn 的博客: 出门搔白首，若负平生志🐎🗡"
+site_description: "🐎出门搔白首，若负平生志🗡"
 theme:
   name: material
   language: zh
@@ -54,6 +54,7 @@ plugins:
         - 日记
         - 随笔
         - 小说
+        - 诗
         - 历史
         - 常用工具
         - 网络技术
@@ -94,6 +95,7 @@ nav:
   - 主页: index.md
   - 博客: 
     - blog/index.md
+  - 友链: links.md
   - 关于: about.md
 
 
@@ -101,6 +103,7 @@ markdown_extensions:
   - pymdownx.arithmatex:
       generic: true
   - attr_list
+  - abbr
   - tables
   - md_in_html
   - admonition
@@ -135,6 +138,7 @@ extra_javascript:
 
 extra_css:
   - https://unpkg.com/katex@0/dist/katex.min.css
+  - stylesheets/extra.css
 
 extra:
   social:
@@ -149,4 +153,4 @@ extra:
     
   generator: true
 
-copyright: 版权所有 &copy，违者必究；2024 - 2026 Zen Shawn
+copyright: Copyright &copy, 2024 - 2026 Zen

@@ -3,12 +3,20 @@ hide:
   - navigation
   - toc
 ---
+
 # 关于我
 
-目前主要在开发用于自动纤维铺放机（Automated Fiber Placement, AFP）的轨迹规划及仿真软件FiberArt。
+目前主要在开发用于 ^^自动纤维铺放机^^ (1) 的轨迹规划及仿真软件 ^^FiberArt^^。
+{ .annotate }
 
-开发机器人轨迹规划、三维仿真、CAM相关的软件。
+1. AFP: Automated Fiber Placement
 
-主要使用c++、python语言，别的也略有涉猎，比如用 svelte 搭建个站点之类的。
+在机器人轨迹规划、三维仿真、CAD/CAM等相关领域积累了深厚经验。
 
-同行道友交流的话，可以发送邮件到 <jacklee99@duck.com> 。
+主要使用 C++、Python 语言，了解 Typescript、JavaScript 等。
+
+熟悉 Qt、[Coin3D](https://www.coin3d.org/)、FreeCAD 、OpenSceneGraph 等开源库。
+
+联系方式 <jacklee99@duck.com> 。
+
+*[AFP]: Automated Fiber Placement
