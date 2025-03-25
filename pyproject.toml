@@ -1,0 +1,11 @@
+[project]
+name = "zen-blogs"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "mkdocs-glightbox>=0.4.0",
+    "mkdocs-material>=9.6.8",
+    "mkdocs-rss-plugin>=1.17.1",
+]
