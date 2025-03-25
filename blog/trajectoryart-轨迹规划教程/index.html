@@ -1,0 +1,1405 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Shawn 的博客: 出门搔白首，若负平生志🐎🗡">
+      
+      
+      
+        <link rel="canonical" href="https://blog.myshawn.com/blog/trajectoryart-%E8%BD%A8%E8%BF%B9%E8%A7%84%E5%88%92%E6%95%99%E7%A8%8B/">
+      
+      
+        <link rel="prev" href="../%E4%BD%BF%E7%94%A8cloudflare-tunnels%E8%BF%9E%E6%8E%A5%E5%88%B0%E6%9C%AC%E5%9C%B0%E4%B8%BB%E6%9C%BA%E7%9A%84ssh%E6%9C%8D%E5%8A%A1/">
+      
+      
+        <link rel="next" href="../%E6%97%A5%E8%AE%B0/">
+      
+      
+        <link rel="alternate" type="application/rss+xml" title="RSS 订阅" href="../../feed_rss_created.xml">
+        <link rel="alternate" type="application/rss+xml" title="已更新内容的 RSS 订阅" href="../../feed_rss_updated.xml">
+      
+      <link rel="icon" href="../../images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.8">
+    
+    
+      
+        <title>TrajectoryArt 轨迹规划教程 - Shawn 的博客</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.8608ea7d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="https://unpkg.com/katex@0/dist/katex.min.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../.." title="Shawn 的博客" class="md-header__button md-logo" aria-label="Shawn 的博客" data-md-component="logo">
+      
+  <img src="../../images/favicon.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Shawn 的博客
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              TrajectoryArt 轨迹规划教程
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9zM20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12zm-9.15 3.96h2.3L12 9z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="lime" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+    
+  
+  主页
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
+          
+  
+    
+  
+  博客
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../about/" class="md-tabs__link">
+        
+  
+    
+  
+  关于
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden>
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Shawn 的博客" class="md-nav__button md-logo" aria-label="Shawn 的博客" data-md-component="logo">
+      
+  <img src="../../images/favicon.png" alt="logo">
+
+    </a>
+    Shawn 的博客
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    主页
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    博客
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            博客
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    归档
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            归档
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../archive/2025/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2025
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../archive/2024/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2024
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    分类
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            分类
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../category/%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    常用工具
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../category/%E6%97%A5%E8%AE%B0/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    日记
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../category/%E6%9C%BA%E5%99%A8%E4%BA%BA%E5%AD%A6/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    机器人学
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../category/%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    网络技术
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    关于
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      简介
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      基本概念
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="基本概念">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      轨迹的计算过程及表示
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      轨迹的速度、加速度约束
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ta" class="md-nav__link">
+    <span class="md-ellipsis">
+      TA的使用方法
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="TA的使用方法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      梯形速度算法
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      梯形匀速算法
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#toppra" class="md-nav__link">
+    <span class="md-ellipsis">
+      TOPPRA 时间最优算法
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      时间最优的匀速算法
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      总结
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+  <div class="md-content md-content--post" data-md-component="content">
+    <div class="md-sidebar md-sidebar--post" data-md-component="sidebar" data-md-type="navigation">
+      <div class="md-sidebar__scrollwrap">
+        <div class="md-sidebar__inner md-post">
+          <nav class="md-nav md-nav--primary">
+            <div class="md-post__back">
+              <div class="md-nav__title md-nav__container">
+                <a href="../" class="md-nav__link">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+                  <span class="md-ellipsis">
+                    回到主页
+                  </span>
+                </a>
+              </div>
+            </div>
+            
+            <ul class="md-post__meta md-nav__list">
+              <li class="md-nav__item md-nav__item--section">
+                <div class="md-post__title">
+                  <span class="md-ellipsis">
+                    元数据
+                  </span>
+                </div>
+                <nav class="md-nav">
+                  <ul class="md-nav__list">
+                    <li class="md-nav__item">
+                      <div class="md-nav__link">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 19H5V8h14m-3-7v2H8V1H6v2H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-1V1m-1 11h-5v5h5z"/></svg>
+                        <time datetime="2025-03-21 00:00:00+00:00" class="md-ellipsis">2025年3月21日星期五</time>
+                      </div>
+                    </li>
+                    
+                    
+                      <li class="md-nav__item">
+                        <div class="md-nav__link">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 3v15h3V3zm3 2 4 13 3-1-4-13zM5 5v13h3V5zM3 19v2h18v-2z"/></svg>
+                          <span class="md-ellipsis">
+                            分类于
+                            
+                              <a href="../category/%E6%9C%BA%E5%99%A8%E4%BA%BA%E5%AD%A6/">机器人学</a></span>
+                        </div>
+                      </li>
+                    
+                    
+                      
+                      <li class="md-nav__item">
+                        <div class="md-nav__link">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7z"/></svg>
+                          <span class="md-ellipsis">
+                            
+                              需要 5 分钟阅读时间
+                            
+                          </span>
+                        </div>
+                      </li>
+                    
+                  </ul>
+                </nav>
+              </li>
+            </ul>
+            
+          </nav>
+          
+        </div>
+      </div>
+    </div>
+    <article class="md-content__inner md-typeset">
+      
+        
+  
+
+
+  <nav class="md-tags" >
+    
+      
+      
+      
+        <span class="md-tag">机器人</span>
+      
+    
+      
+      
+      
+        <span class="md-tag">轨迹规划</span>
+      
+    
+  </nav>
+
+
+
+  <h1>TrajectoryArt 轨迹规划教程</h1>
+
+<h2 id="_1">简介</h2>
+<p><a href="https://github.com/xiaodaxia-2008/TrajectoryArtPub">TrajectoryArt</a>（以下简称TA）是用于生成机器人轨迹的c++/python库，它包含了很多算法，可以满足不同的需求。
+可以根据用户输入的一系列离散的路径点（waypoint），以及轨迹的速度、加速度约束等计算出时间最优的轨迹。</p>
+<figure>
+<p><a class="glightbox" href="../trajectory-art-tutorial/spiral_path.gif" data-type="image" data-width="auto" data-height="auto" data-title="轨迹路径" data-desc-position="bottom"><img alt="轨迹路径" loading="lazy" src="../trajectory-art-tutorial/spiral_path.gif" width="auto" /></a></p>
+<figcaption>
+<p>使用贝塞尔曲线圆滑过度的轨迹路径</p>
+</figcaption>
+</figure>
+<!-- more -->
+
+<h2 id="_2">基本概念</h2>
+<h3 id="_3">轨迹的计算过程及表示</h3>
+<p>TA中计算一条轨迹，大致的步骤如下：</p>
+<ul>
+<li>进行路径（Path）的光滑插值，获取到至少满足C1（一阶导数，即切向，Tangent）连续的路径 <span class="arithmatex">\(p(s)\)</span> ，<code>s</code> 是路径的参数，一般的意义是弧长。插值算法一般有：</li>
+<li>三次样条曲线、贝塞尔曲线等拟合插值</li>
+<li>直线加弧线过渡，TA里面弧线可以设置为二阶、五阶贝塞尔，或者圆弧</li>
+<li>计算参数曲线 <span class="arithmatex">\(s(t)\)</span> ，<code>t</code> 为时间。 <span class="arithmatex">\(p(s)\)</span> 表示的是轨迹在空间中的位置路径，<span class="arithmatex">\(s(t)\)</span> 表示的是轨迹沿这条路径前进的快慢，拥有了时间属性，继而可以计算速度、加速度</li>
+<li>最终轨迹的表达式为 <span class="arithmatex">\(q(t) = p(s(t))\)</span> ，在物理意义上，<code>t</code> 表示时间，<code>s</code> 可以理解为从轨迹起点到当前时间点沿着轨迹路径走过的曲线长度</li>
+</ul>
+<h3 id="_4">轨迹的速度、加速度约束</h3>
+<p>以机器人关节空间为例，每个关节能够运行的最大速度、最大加速度是由电机功率决定的，因此决定了关节运行速度、加速度的会有一个最大值。</p>
+<p>在TA中进行计算的时候，计算时间最优轨迹，需要添加以下约束：</p>
+<div class="arithmatex">\[
+\dot q_{min} \le \dot q \le \dot q_{max} \\
+\ddot q_{min} \le \ddot q \le \ddot q_{max} \\
+\]</div>
+<p>同时根据<span class="arithmatex">\(q(t)\)</span>的表达式，可以得到</p>
+<div class="arithmatex">\[
+\begin{align}
+q(t) &amp;= p(s(t)) \\
+\dot q &amp;= p'\dot s \\
+\ddot q &amp;= p''\dot s + p'\ddot s
+\end{align}
+\]</div>
+<p>通过上式，可以把针对轨迹 <span class="arithmatex">\(q(t)\)</span> 的约束，转换为针对路径 <span class="arithmatex">\(p(s)\)</span> 和 参数 <span class="arithmatex">\(s(t)\)</span> 的约束。一般 <span class="arithmatex">\(p(s)\)</span> 与路径点、过度弧线类型、长短有关系；而 <span class="arithmatex">\(s(t)\)</span> 则与轨迹速度快慢有关系，一般会将约束最终转换到对 <span class="arithmatex">\(\dot s, \ddot s\)</span> 的约束。</p>
+<h2 id="ta">TA的使用方法</h2>
+<p class="annotate">TA使用统一的接口 <code class="language-python highlight"><span class="n">traj</span> <span class="o">=</span> <span class="n">Trajectory</span><span class="o">.</span><span class="n">Create</span><span class="p">(</span><span class="n">waypoints</span><span class="p">,</span> <span class="n">params</span><span class="p">)</span></code>(1) 进行计算，其中 <code>waypoints</code> 就是所有路径点，<code>params</code> 是与算法相关的其他参数。</p>
+<ol>
+<li>在c++中，TA的使用方法是 <code class="language-c++ highlight"><span class="k">auto</span><span class="w"> </span><span class="n">traj</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Trajectory</span><span class="o">::</span><span class="n">Create</span><span class="p">(</span><span class="n">waypoints</span><span class="p">,</span><span class="w"> </span><span class="n">params</span><span class="p">)</span></code></li>
+</ol>
+<p>返回值 <code>traj</code> 是一个 <code>Trajectory</code> 对象，我们可以使用下面的接口获取到轨迹的相关信息：</p>
+<ul>
+<li><code>GetDuration()</code>： 获取轨迹时长</li>
+<li><code>GetPosition(t)</code>：获取<code>t</code>时刻的轨迹位置</li>
+<li><code>GetVelocity(t)</code>：获取<code>t</code>时刻的轨迹速度</li>
+<li><code>GetAcceleration(t)</code>：获取<code>t</code>时刻的轨迹加速度</li>
+</ul>
+<p>下面就不同的算法对<code>params</code>参数进行解释，并且给出了实际例子。</p>
+<p>以下例子中，使用的路径点如下所示：</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">python</label><label for="__tabbed_1_2">c++</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-python highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-0-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-0-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-0-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-0-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-0-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-0-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-0-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-0-10">10</a></span>
+<span class="normal"><a href="#__codelineno-0-11">11</a></span>
+<span class="normal"><a href="#__codelineno-0-12">12</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="kn">from</span><span class="w"> </span><span class="nn">PyTrajectoryArt</span><span class="w"> </span><span class="kn">import</span> <span class="n">Trajectory</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3"></a>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="n">waypoints</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span>   <span class="mf">0.</span><span class="p">,</span>    <span class="mf">0.</span><span class="p">,</span>    <span class="mf">0.</span><span class="p">],</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5"></a>                    <span class="p">[</span><span class="mf">1000.</span><span class="p">,</span>    <span class="mf">0.</span><span class="p">,</span>  <span class="mf">100.</span><span class="p">],</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6"></a>                    <span class="p">[</span><span class="mf">1000.</span><span class="p">,</span> <span class="mf">1000.</span><span class="p">,</span>  <span class="mf">200.</span><span class="p">],</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7"></a>                    <span class="p">[</span>   <span class="mf">0.</span><span class="p">,</span> <span class="mf">1000.</span><span class="p">,</span>  <span class="mf">300.</span><span class="p">],</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8"></a>                    <span class="p">[</span>   <span class="mf">0.</span><span class="p">,</span>    <span class="mf">0.</span><span class="p">,</span>  <span class="mf">400.</span><span class="p">],</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9"></a>                    <span class="p">[</span><span class="mf">1000.</span><span class="p">,</span>    <span class="mf">0.</span><span class="p">,</span>  <span class="mf">500.</span><span class="p">],</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10"></a>                    <span class="p">[</span><span class="mf">1000.</span><span class="p">,</span> <span class="mf">1000.</span><span class="p">,</span>  <span class="mf">600.</span><span class="p">],</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11"></a>                    <span class="p">[</span>   <span class="mf">0.</span><span class="p">,</span> <span class="mf">1000.</span><span class="p">,</span>  <span class="mf">700.</span><span class="p">],</span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12"></a>                    <span class="p">[</span>   <span class="mf">0.</span><span class="p">,</span>    <span class="mf">0.</span><span class="p">,</span>  <span class="mf">800.</span><span class="p">]])</span>
+</span></code></pre></div></td></tr></table></div>
+</div>
+<div class="tabbed-block">
+<div class="language-c++ highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-1-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-1-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-1-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-1-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-1-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-1-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-1-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-1-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-1-10">10</a></span>
+<span class="normal"><a href="#__codelineno-1-11">11</a></span>
+<span class="normal"><a href="#__codelineno-1-12">12</a></span>
+<span class="normal"><a href="#__codelineno-1-13">13</a></span>
+<span class="normal"><a href="#__codelineno-1-14">14</a></span>
+<span class="normal"><a href="#__codelineno-1-15">15</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;TA/TrajectoryArt.h&gt;</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2"></a>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">waypoints</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="w">        </span><span class="p">{</span><span class="w">   </span><span class="mf">0.</span><span class="p">,</span><span class="w">    </span><span class="mf">0.</span><span class="p">,</span><span class="w">    </span><span class="mf">0.</span><span class="p">},</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="w">        </span><span class="p">{</span><span class="mf">1000.</span><span class="p">,</span><span class="w">    </span><span class="mf">0.</span><span class="p">,</span><span class="w">  </span><span class="mf">100.</span><span class="p">},</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="w">        </span><span class="p">{</span><span class="mf">1000.</span><span class="p">,</span><span class="w"> </span><span class="mf">1000.</span><span class="p">,</span><span class="w">  </span><span class="mf">200.</span><span class="p">},</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8"></a><span class="w">        </span><span class="p">{</span><span class="w">   </span><span class="mf">0.</span><span class="p">,</span><span class="w"> </span><span class="mf">1000.</span><span class="p">,</span><span class="w">  </span><span class="mf">300.</span><span class="p">},</span>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9"></a><span class="w">        </span><span class="p">{</span><span class="w">   </span><span class="mf">0.</span><span class="p">,</span><span class="w">    </span><span class="mf">0.</span><span class="p">,</span><span class="w">  </span><span class="mf">400.</span><span class="p">},</span>
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10"></a><span class="w">        </span><span class="p">{</span><span class="mf">1000.</span><span class="p">,</span><span class="w">    </span><span class="mf">0.</span><span class="p">,</span><span class="w">  </span><span class="mf">500.</span><span class="p">},</span>
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11"></a><span class="w">        </span><span class="p">{</span><span class="mf">1000.</span><span class="p">,</span><span class="w"> </span><span class="mf">1000.</span><span class="p">,</span><span class="w">  </span><span class="mf">600.</span><span class="p">},</span>
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12"></a><span class="w">        </span><span class="p">{</span><span class="w">   </span><span class="mf">0.</span><span class="p">,</span><span class="w"> </span><span class="mf">1000.</span><span class="p">,</span><span class="w">  </span><span class="mf">700.</span><span class="p">},</span>
+</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13"></a><span class="w">        </span><span class="p">{</span><span class="w">   </span><span class="mf">0.</span><span class="p">,</span><span class="w">    </span><span class="mf">0.</span><span class="p">,</span><span class="w">  </span><span class="mf">800.</span><span class="p">},</span>
+</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14"></a><span class="w">    </span><span class="p">};</span>
+</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15"></a><span class="p">}</span>
+</span></code></pre></div></td></tr></table></div>
+</div>
+</div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">关于路径点的长度单位</p>
+<p>TA中并没有规定路径点应该使用哪种长度单位，但是很多默认参数都是假设用户输入的路径点的长度单位是米，角度单位是弧度。
+如果用户使用其他单位，应该避免使用TA中的默认参数，比如对于上述例子，显然单位应该是毫米，如果在规划时，用户没有输入<code>vel_limits</code> 和 <code>acc_limits</code>，
+在算法内部，会采用默认值，而默认值是5和25，如果以米为单位，这似乎还行，如果单位是毫米，那么这个速度限制就太慢了。</p>
+</div>
+<h3 id="_5">梯形速度算法<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup></h3>
+<p>梯形速度算法使用直线段-贝塞尔二阶的路径插值算法，因为在直线段使用梯形速度曲线，由此得名。</p>
+<p>梯形速度算法可设置的参数如下：</p>
+<ul>
+<li><code>algorithm</code>: 需要设置为 <code>trapezoidal</code>，或者不设置也可以，默认即是该值</li>
+<li><code>path_type</code>: 设置为 <code>bezier_quadratic_blend</code>, 可以不设置，默认就是 <code>bezier_quadratic_blend</code></li>
+<li><code>tolerance_blend</code>: 过渡段贝塞尔曲线的长度与该值正相关</li>
+<li><code>vel_limits</code>: 设置各个关节的最大速度；可以是单个实数或者一个列表，如果是单个实数，那么所有关节的最大速度都是该值</li>
+<li><code>acc_limits</code>: 设置各个关节的最大加速度，同样的可以是单个值或者一个列表</li>
+</ul>
+<p>具体参考如下例子：</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">python</label><label for="__tabbed_2_2">c++</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-python highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">params</span> <span class="o">=</span> <span class="p">{}</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="n">params</span><span class="p">[</span><span class="s2">&quot;algorithm&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;trapezoidal&quot;</span> 
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="n">params</span><span class="p">[</span><span class="s2">&quot;path_type&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;bezier_quadratic_blend&quot;</span> 
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="n">params</span><span class="p">[</span><span class="s2">&quot;tolerance_blend&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mf">100.0</span> 
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="n">params</span><span class="p">[</span><span class="s2">&quot;vel_limits&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mf">500.0</span><span class="p">]</span> <span class="o">*</span> <span class="mi">3</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="n">params</span><span class="p">[</span><span class="s2">&quot;acc_limits&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mf">3000.0</span><span class="p">]</span> <span class="o">*</span> <span class="mi">3</span>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="n">traj</span> <span class="o">=</span> <span class="n">Trajectory</span><span class="o">.</span><span class="n">Create</span><span class="p">(</span><span class="n">waypoints</span><span class="p">,</span> <span class="n">params</span><span class="p">)</span>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="nb">print</span><span class="p">(</span><span class="n">traj</span><span class="o">.</span><span class="n">GetDuration</span><span class="p">())</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="language-c++ highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">auto</span><span class="w"> </span><span class="n">traj</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Trajectory</span><span class="o">::</span><span class="n">Create</span><span class="p">(</span><span class="n">waypoints</span><span class="p">,</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">    </span><span class="p">{</span><span class="s">&quot;algorithm&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;trapezoidal&quot;</span><span class="p">},</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">    </span><span class="p">{</span><span class="s">&quot;path_type&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;bezier_quadratic_blend&quot;</span><span class="p">},</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">    </span><span class="p">{</span><span class="s">&quot;tolerance_blend&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">100.0</span><span class="p">},</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">    </span><span class="p">{</span><span class="s">&quot;vel_limits&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="p">{</span><span class="mf">500.0</span><span class="p">,</span><span class="w"> </span><span class="mf">500.0</span><span class="p">,</span><span class="w"> </span><span class="mf">500.0</span><span class="p">}},</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">    </span><span class="p">{</span><span class="s">&quot;acc_limits&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="p">{</span><span class="mf">3000.0</span><span class="p">,</span><span class="w"> </span><span class="mf">3000.0</span><span class="p">,</span><span class="w"> </span><span class="mf">3000.0</span><span class="p">}},</span>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="p">});</span>
+</span></code></pre></div>
+</div>
+</div>
+</div>
+<blockquote>
+<p>轨迹时间：16.166666666666668</p>
+</blockquote>
+<div class="admonition note">
+<p class="admonition-title">注意</p>
+<p>在c++中，<code>params</code>是的类型是<code class="language-c++ highlight"><span class="n">std</span><span class="o">::</span><span class="n">unordered_map</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">variant</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="p">,</span><span class="w"> </span><span class="kt">bool</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;&gt;&gt;</span></code> 。</p>
+</div>
+<p>以上就成功创建了一条轨迹，我们将它显示出来：</p>
+<p><a class="glightbox" href="../trajectory-art-tutorial/output_15_0.png" data-type="image" data-width="auto" data-height="auto" data-title="png" data-desc-position="bottom"><img alt="png" src="../trajectory-art-tutorial/output_15_0.png" /></a></p>
+<p>该算法的计算速度很快，我们可以大致测试一下通过python封装的速度。</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="o">%%</span><span class="n">timeit</span> 
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="n">traj</span> <span class="o">=</span> <span class="n">Trajectory</span><span class="o">.</span><span class="n">Create</span><span class="p">(</span><span class="n">waypoints</span><span class="p">,</span> <span class="n">params</span><span class="p">)</span>
+</span></code></pre></div>
+<div class="language-text highlight"><pre><span></span><code>440 μs ± 39.5 μs per loop (mean ± std. dev. of 7 runs, 1,000 loops each)
+</code></pre></div>
+<h3 id="_6">梯形匀速算法</h3>
+<p><a id="trapezoidal-constant-speed"></a></p>
+<p>梯形速度算法是给定速度、加速度限制的时间最优轨迹，但是从结果图中也可以看出，该方法计算出来的机器人工具末端点速度（tcp speed，各个自由度的速度的合成速度）有反复波动，有些情况下我们需要计算一条刀具点速度恒定不变的轨迹，梯形匀速算法用来生成这种轨迹。</p>
+<p>它需要设置的参数如下：</p>
+<ul>
+<li><code>algorithm</code>：设置为 <code>trapezoidal_constant_speed</code></li>
+<li><code>path_type</code>: 推荐设置为 <code>circle_blend</code>，此时严格匀速；如果设置为 <code>bezier_quadratic_blend</code> 或者 <code>bezier_quintic_blend</code> 可以接近于匀速</li>
+<li><code>tolerance_blend</code>: 与之前相同，控制弧线段长度</li>
+<li><code>speed</code>: 刀具点的匀速速度</li>
+<li><code>acceleration</code>：刀具点的加速度</li>
+</ul>
+<p>参考如下例子：</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">python</label><label for="__tabbed_3_2">c++</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-python highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="n">params</span> <span class="o">=</span> <span class="p">{}</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="n">params</span><span class="p">[</span><span class="s2">&quot;algorithm&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;trapezoidal_constant_speed&quot;</span> 
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="n">params</span><span class="p">[</span><span class="s2">&quot;path_type&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;circle_blend&quot;</span> 
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="n">params</span><span class="p">[</span><span class="s2">&quot;tolerance_blend&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mf">100.0</span> 
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="n">params</span><span class="p">[</span><span class="s2">&quot;speed&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mf">300.0</span>
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="n">params</span><span class="p">[</span><span class="s2">&quot;acceleration&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mf">1000.0</span>
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="n">traj</span> <span class="o">=</span> <span class="n">Trajectory</span><span class="o">.</span><span class="n">Create</span><span class="p">(</span><span class="n">waypoints</span><span class="p">,</span> <span class="n">params</span><span class="p">)</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="language-c++ highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">auto</span><span class="w"> </span><span class="n">traj</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Trajectory</span><span class="o">::</span><span class="n">Create</span><span class="p">(</span><span class="n">waypoints</span><span class="p">,</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">    </span><span class="p">{</span><span class="s">&quot;algorithm&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;trapezoidal_constant_speed&quot;</span><span class="p">},</span>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="w">    </span><span class="p">{</span><span class="s">&quot;path_type&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;circle_blend&quot;</span><span class="p">},</span>
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="w">    </span><span class="p">{</span><span class="s">&quot;tolerance_blend&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">100.0</span><span class="p">},</span>
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="w">    </span><span class="p">{</span><span class="s">&quot;speed&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">300.0</span><span class="p">},</span>
+</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="w">    </span><span class="p">{</span><span class="s">&quot;acceleration&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">1000.0</span><span class="p">},</span>
+</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="p">});</span>
+</span></code></pre></div>
+</div>
+</div>
+</div>
+<p><a class="glightbox" href="../trajectory-art-tutorial/output_20_0.png" data-type="image" data-width="auto" data-height="auto" data-title="png" data-desc-position="bottom"><img alt="png" src="../trajectory-art-tutorial/output_20_0.png" /></a></p>
+<p>从右下角图中可以看出，轨迹的刀具点速度是恒定不变的。但需要注意的是，该算法并不考虑各个自由度单独的速度、加速度限制，计算出来的轨迹可能导致某个自由度的速度、加速度超限。一般来讲，各个自由度的最大速度不会超过给定的最大匀速速度（只有单个自由度运动时，刀具点速度就是该自由度的速度）；但是各自由度的加速度在弧线段可能具有很大的值。</p>
+<p>比如我们将<code>speed</code>设置为500.0，重新计算，可以看到轨迹时间缩短，但是最大加速度也显著增加。使用该算法时，需要认真考虑是否会导致某个自由度的加速度超限。</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="n">params</span><span class="p">[</span><span class="s2">&quot;speed&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mf">500.0</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="n">traj</span> <span class="o">=</span> <span class="n">Trajectory</span><span class="o">.</span><span class="n">Create</span><span class="p">(</span><span class="n">waypoints</span><span class="p">,</span> <span class="n">params</span><span class="p">)</span>
+</span></code></pre></div>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="n">plot_traj_components</span><span class="p">(</span><span class="n">traj</span><span class="p">)</span>
+</span></code></pre></div>
+<p><a class="glightbox" href="../trajectory-art-tutorial/output_23_0.png" data-type="image" data-width="auto" data-height="auto" data-title="png" data-desc-position="bottom"><img alt="png" src="../trajectory-art-tutorial/output_23_0.png" /></a></p>
+<h3 id="toppra">TOPPRA 时间最优算法<sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup></h3>
+<p><a id="toppra"></a></p>
+<p>该算法可以针对任意C1连续的轨迹，计算出时间最优的参数 <span class="arithmatex">\(s(t)\)</span> ，相对于梯形速度算法，同等约束和路径下计算出来的轨迹时长一般会更短，但是计算量相对更大，计算耗时也稍微长一些。</p>
+<p>在计算时，TOPPRA算法以一定的<strong>步长</strong>在路径上采样点，计算每个点处在给定约束下可以采取的最大速度，最终生成的轨迹就是沿着给定路最开到达终点的。</p>
+<p>它需要设置的参数如下：</p>
+<ul>
+<li><code>algorithm</code>: 设置为 <code>toppra</code></li>
+<li><code>path_type</code>: 推荐设置为 <code>bezier_quadratic_blend</code>，也可以设置为 <code>bezier_quintic_blend</code> 或者 <code>circle_blend</code></li>
+<li><code>tolerance_blend</code>: 同上，控制过渡弧长段长度</li>
+<li><code>vel_limits</code>: 同上，各个自由度的速度约束</li>
+<li><code>acc_limits</code>: 同上，各个自由度的加速度约束</li>
+<li><code>step_size</code>: 上文所属的<strong>步长</strong>，设置的越小，计算越耗时，一般可以设置为希望轨迹保持的精度，比如 <code>0.1 mm</code></li>
+</ul>
+<p>参考例子如下：</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">python</label><label for="__tabbed_4_2">c++</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-python highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="n">params</span> <span class="o">=</span> <span class="p">{}</span>
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="n">params</span><span class="p">[</span><span class="s2">&quot;algorithm&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;toppra&quot;</span> 
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="n">params</span><span class="p">[</span><span class="s2">&quot;path_type&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;bezier_quadratic_blend&quot;</span> 
+</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="n">params</span><span class="p">[</span><span class="s2">&quot;tolerance_blend&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mf">100.0</span> 
+</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="n">params</span><span class="p">[</span><span class="s2">&quot;vel_limits&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mf">500.0</span><span class="p">]</span> <span class="o">*</span> <span class="mi">3</span>
+</span><span id="__span-9-6"><a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a><span class="n">params</span><span class="p">[</span><span class="s2">&quot;acc_limits&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mf">3000.0</span><span class="p">]</span> <span class="o">*</span> <span class="mi">3</span>
+</span><span id="__span-9-7"><a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a><span class="n">params</span><span class="p">[</span><span class="s2">&quot;step_size&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mf">0.1</span>
+</span><span id="__span-9-8"><a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a><span class="n">traj</span> <span class="o">=</span> <span class="n">Trajectory</span><span class="o">.</span><span class="n">Create</span><span class="p">(</span><span class="n">waypoints</span><span class="p">,</span> <span class="n">params</span><span class="p">)</span>
+</span><span id="__span-9-9"><a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a><span class="nb">print</span><span class="p">(</span><span class="n">traj</span><span class="o">.</span><span class="n">GetDuration</span><span class="p">())</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="language-c++ highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="k">auto</span><span class="w"> </span><span class="n">traj</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Trajectory</span><span class="o">::</span><span class="n">Create</span><span class="p">(</span><span class="n">waypoints</span><span class="p">,</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="w">    </span><span class="p">{</span><span class="s">&quot;algorithm&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;toppra&quot;</span><span class="p">},</span>
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="w">    </span><span class="p">{</span><span class="s">&quot;path_type&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;bezier_quadratic_blend&quot;</span><span class="p">},</span>
+</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="w">    </span><span class="p">{</span><span class="s">&quot;tolerance_blend&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">100.0</span><span class="p">},</span>
+</span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="w">    </span><span class="p">{</span><span class="s">&quot;vel_limits&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="p">{</span><span class="mf">500.0</span><span class="p">,</span><span class="w"> </span><span class="mf">500.0</span><span class="p">,</span><span class="w"> </span><span class="mf">500.0</span><span class="p">}},</span>
+</span><span id="__span-10-6"><a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a><span class="w">    </span><span class="p">{</span><span class="s">&quot;acc_limits&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="p">{</span><span class="mf">3000.0</span><span class="p">,</span><span class="w"> </span><span class="mf">3000.0</span><span class="p">,</span><span class="w"> </span><span class="mf">3000.0</span><span class="p">}},</span>
+</span><span id="__span-10-7"><a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a><span class="w">    </span><span class="p">{</span><span class="s">&quot;step_size&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">0.1</span><span class="p">},</span>
+</span><span id="__span-10-8"><a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a><span class="p">});</span>
+</span></code></pre></div>
+<div class="language-text highlight"><pre><span></span><code>轨迹时间：15.566076654410695
+</code></pre></div>
+</div>
+</div>
+</div>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="n">plot_traj_components</span><span class="p">(</span><span class="n">traj</span><span class="p">)</span>
+</span></code></pre></div>
+<p><a class="glightbox" href="../trajectory-art-tutorial/output_26_0.png" data-type="image" data-width="auto" data-height="auto" data-title="png" data-desc-position="bottom"><img alt="png" src="../trajectory-art-tutorial/output_26_0.png" /></a></p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="o">%%</span><span class="n">timeit</span>
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="n">traj</span> <span class="o">=</span> <span class="n">Trajectory</span><span class="o">.</span><span class="n">Create</span><span class="p">(</span><span class="n">waypoints</span><span class="p">,</span> <span class="n">params</span><span class="p">)</span>
+</span></code></pre></div>
+<div class="language-text highlight"><pre><span></span><code>2.09 s ± 14.4 ms per loop (mean ± std. dev. of 7 runs, 1 loop each)
+</code></pre></div>
+<p>可以看到，toppra 算法计算出来的轨迹时间相比梯形速度算法要稍微短一些，但是它的计算耗时远远超过梯形速度算法，不过也可以通过调整<code>step_size</code>来减少计算耗时。</p>
+<h3 id="_7">时间最优的匀速算法</h3>
+<p>我们之前已经解释了<a href="#trapezoidal-constant-speed">梯形匀速算法</a>，配合圆弧过度，它可以计算刀具点速度严格相等的轨迹，但是并不考虑各个自由度的速度、加速度限制，可能会导致轨迹实际不可执行。时间最优匀速算法，同时考虑刀具点的速度值和各个自由度的速度、加速度限制；在计算时，先根据给定各个自由度速度、加速度的约束计算刀具点此刻能够达到的最大速度，然后实际轨迹的刀具点速度取该值和设置的刀具点速度值中较小的那个。更直白的讲，就是在满足每个自由度速度、加速度约束下，再尽量去满足刀具点的合成速度的约束。</p>
+<p>该算法设置的参数与 <a href="#toppra">TOPPRA 时间最优算法</a>基本一致，只是多了如下参数：</p>
+<ul>
+<li><code>speed</code>: 设置期望的刀具点速度大小，该速度是各个自由度的速度的合成</li>
+</ul>
+<p>参考例子如下：</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:2"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><input id="__tabbed_5_2" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="__tabbed_5_1">python</label><label for="__tabbed_5_2">c++</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-python highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="n">params</span> <span class="o">=</span> <span class="p">{}</span>
+</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="n">params</span><span class="p">[</span><span class="s2">&quot;algorithm&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;toppra&quot;</span> 
+</span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="n">params</span><span class="p">[</span><span class="s2">&quot;path_type&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;bezier_quadratic_blend&quot;</span> 
+</span><span id="__span-13-4"><a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a><span class="n">params</span><span class="p">[</span><span class="s2">&quot;tolerance_blend&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mf">100.0</span> 
+</span><span id="__span-13-5"><a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a><span class="n">params</span><span class="p">[</span><span class="s2">&quot;vel_limits&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mf">500.0</span><span class="p">]</span> <span class="o">*</span> <span class="mi">3</span>
+</span><span id="__span-13-6"><a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a><span class="n">params</span><span class="p">[</span><span class="s2">&quot;acc_limits&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mf">3000.0</span><span class="p">]</span> <span class="o">*</span> <span class="mi">3</span>
+</span><span id="__span-13-7"><a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a><span class="n">params</span><span class="p">[</span><span class="s2">&quot;step_size&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mf">0.1</span>
+</span><span id="__span-13-8"><a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a><span class="n">params</span><span class="p">[</span><span class="s2">&quot;speed&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mf">500.0</span>
+</span><span id="__span-13-9"><a id="__codelineno-13-9" name="__codelineno-13-9" href="#__codelineno-13-9"></a><span class="n">traj</span> <span class="o">=</span> <span class="n">Trajectory</span><span class="o">.</span><span class="n">Create</span><span class="p">(</span><span class="n">waypoints</span><span class="p">,</span> <span class="n">params</span><span class="p">)</span>
+</span><span id="__span-13-10"><a id="__codelineno-13-10" name="__codelineno-13-10" href="#__codelineno-13-10"></a><span class="nb">print</span><span class="p">(</span><span class="n">traj</span><span class="o">.</span><span class="n">GetDuration</span><span class="p">())</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="language-c++ highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="k">auto</span><span class="w"> </span><span class="n">traj</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Trajectory</span><span class="o">::</span><span class="n">Create</span><span class="p">(</span><span class="n">waypoints</span><span class="p">,</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="w">    </span><span class="p">{</span><span class="s">&quot;algorithm&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;toppra&quot;</span><span class="p">},</span>
+</span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="w">    </span><span class="p">{</span><span class="s">&quot;path_type&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;bezier_quadratic_blend&quot;</span><span class="p">},</span>
+</span><span id="__span-14-4"><a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a><span class="w">    </span><span class="p">{</span><span class="s">&quot;tolerance_blend&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">100.0</span><span class="p">},</span>
+</span><span id="__span-14-5"><a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a><span class="w">    </span><span class="p">{</span><span class="s">&quot;vel_limits&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="p">{</span><span class="mf">500.0</span><span class="p">,</span><span class="w"> </span><span class="mf">500.0</span><span class="p">,</span><span class="w"> </span><span class="mf">500.0</span><span class="p">}},</span>
+</span><span id="__span-14-6"><a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a><span class="w">    </span><span class="p">{</span><span class="s">&quot;acc_limits&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="p">{</span><span class="mf">3000.0</span><span class="p">,</span><span class="w"> </span><span class="mf">3000.0</span><span class="p">,</span><span class="w"> </span><span class="mf">3000.0</span><span class="p">}},</span>
+</span><span id="__span-14-7"><a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a><span class="w">    </span><span class="p">{</span><span class="s">&quot;step_size&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">0.1</span><span class="p">},</span>
+</span><span id="__span-14-8"><a id="__codelineno-14-8" name="__codelineno-14-8" href="#__codelineno-14-8"></a><span class="w">    </span><span class="p">{</span><span class="s">&quot;speed&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">500.0</span><span class="p">},</span>
+</span><span id="__span-14-9"><a id="__codelineno-14-9" name="__codelineno-14-9" href="#__codelineno-14-9"></a><span class="p">});</span>
+</span></code></pre></div>
+<div class="language-text highlight"><pre><span></span><code>轨迹时间：15.724171391457714
+</code></pre></div>
+</div>
+</div>
+</div>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="n">plot_traj_components</span><span class="p">(</span><span class="n">traj</span><span class="p">)</span>
+</span></code></pre></div>
+<p><a class="glightbox" href="../trajectory-art-tutorial/output_31_0.png" data-type="image" data-width="auto" data-height="auto" data-title="png" data-desc-position="bottom"><img alt="png" src="../trajectory-art-tutorial/output_31_0.png" /></a></p>
+<p>从右下角图中可以看到刀具点速度不再有之前那样的波动，超过500的值都会被截断，轨迹的速度因而更加平滑。</p>
+<h2 id="_8">总结</h2>
+<p>在多种轨迹算法之中，我们需要根据应用情况具体来选择一种合适的，我们推荐如下几种使用场景：</p>
+<ul>
+<li>点对点轨迹，比如抓取放置，对中间路径基本不做要求，或者中间添加几个引导点即可，如果要求计算时间很快，就使用梯形速度算法，如果计算时间没有严格要求，可以使用TOPPRA时间最优算法</li>
+<li>焊接等要严格跟踪一个路径，以及要求刀具点匀速，这个时候如果刀具点速度不大，且路径比较近似直线，采用梯形匀速算法，一般不会超限；否则使用时间最优的匀速算法</li>
+<li>大量密集的点构成的很长的路径，这种情况下使用梯形速度算法，以免计算时间太长；如果使用TOPPRA算法，应该用较大一点的步长，根据经验，在c++中，总的采样点数控制在10000000，一般可以在1s内完成计算</li>
+</ul>
+<p>以上算法都有一个特点，就是轨迹的速度是连续的，加速度最大/最小值受到约束，但是加速度在最大值/最小值之间直接阶跃，导致轨迹的光滑度没有那么理想，后面我们会实现加速度连续的轨迹算法。</p>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:1">
+<p>Biagiotti, Luigi &amp; Melchiorri, Claudio. (2008). Trajectory Planning for Automatic Machines and Robots. 10.1007/978-3-540-85629-0.&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+<li id="fn:2">
+<p>H. Pham and Q. -C. Pham, "A New Approach to Time-Optimal Path Parameterization Based on Reachability Analysis," in IEEE Transactions on Robotics, vol. 34, no. 3, pp. 645-659, June 2018, doi: 10.1109/TRO.2018.2819195.&#160;<a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+  
+
+
+
+      
+    </article>
+  </div>
+
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+        
+      
+      <nav class="md-footer__inner md-grid" aria-label="页脚" >
+        
+          
+          <a href="../%E4%BD%BF%E7%94%A8cloudflare-tunnels%E8%BF%9E%E6%8E%A5%E5%88%B0%E6%9C%AC%E5%9C%B0%E4%B8%BB%E6%9C%BA%E7%9A%84ssh%E6%9C%8D%E5%8A%A1/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 使用cloudflare tunnels连接到本地主机的ssh服务">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                上一页
+              </span>
+              <div class="md-ellipsis">
+                使用cloudflare tunnels连接到本地主机的ssh服务
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../%E6%97%A5%E8%AE%B0/" class="md-footer__link md-footer__link--next" aria-label="下一页: 日记">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                下一页
+              </span>
+              <div class="md-ellipsis">
+                日记
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      版权所有 &copy，违者必究；2024 - 2026 Zen Shawn
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/xiaodaxia-2008" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="mailto:<jacklee99@duck.com>" target="_blank" rel="noopener" title="给我发邮件" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M498.1 5.6c10.1 7 15.4 19.1 13.5 31.2l-64 416c-1.5 9.7-7.4 18.2-16 23s-18.9 5.4-28 1.6L284 427.7l-68.5 74.1c-8.9 9.7-22.9 12.9-35.2 8.1S160 493.2 160 480v-83.6c0-4 1.5-7.8 4.2-10.8l167.6-182.8c5.8-6.3 5.6-16-.4-22s-15.7-6.4-22-.7L106 360.8l-88.3-44.2C7.1 311.3.3 300.7 0 288.9s5.9-22.8 16.1-28.7l448-256c10.7-6.1 23.9-5.5 34 1.4"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="/feed_rss_created.xml" target="_blank" rel="noopener" title="RSS订阅" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19.199 24C19.199 13.467 10.533 4.8 0 4.8V0c13.165 0 24 10.835 24 24zM3.291 17.415a3.3 3.3 0 0 1 3.293 3.295A3.303 3.303 0 0 1 3.283 24C1.47 24 0 22.526 0 20.71s1.475-3.294 3.291-3.295M15.909 24h-4.665c0-6.169-5.075-11.245-11.244-11.245V8.09c8.727 0 15.909 7.184 15.909 15.91"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.sections", "navigation.indexes", "navigation.tabs", "navigation.instant.prefetch", "navigation.instant.progress", "navigation.tracking", "navigation.top", "navigation.footer", "toc.follow", "header.autohide", "content.code.copy", "content.code.select", "content.tabs.link"], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+        <script src="../../javascripts/katex.js"></script>
+      
+        <script src="https://unpkg.com/katex@0/dist/katex.min.js"></script>
+      
+        <script src="https://unpkg.com/katex@0/dist/contrib/auto-render.min.js"></script>
+      
+    
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
+</html>
