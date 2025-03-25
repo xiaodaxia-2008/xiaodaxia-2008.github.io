@@ -8,6 +8,7 @@ wheels/
 .cache
 .DS_Store
 .obsidian
+.trash
 
 # Virtual environments
 .venv
