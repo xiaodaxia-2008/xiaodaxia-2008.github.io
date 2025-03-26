@@ -9,15 +9,14 @@ hide:
 Zen
 </h1>
 
-![sleepy-cat](./images/sleepy-cat.png){ width="300px" data-title="路边两只互相依偎熟睡的橘猫" data-description="这是我在早晨上班路上拍摄的"}
+![sleepy-cat](./images/sleepy-cat.png){ width="300px" data-title="路边两只互相依偎熟睡的橘猫" }
 ///caption
 ///
-
 
 :racehorse: **出门搔白首，若负平生志** :crossed_swords:
 { .center }
 
-[:fontawesome-solid-blog:](/blog)
+[:fontawesome-solid-blog:](blog/index.md)
 &nbsp;
 [:simple-bilibili:](https://space.bilibili.com/231692492/dynamic?spm_id_from=333.1365.my-info.dyns.click)
 &nbsp;
