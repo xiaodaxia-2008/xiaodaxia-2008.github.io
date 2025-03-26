@@ -32,7 +32,7 @@ hide:
 ## 添加本站
 
 ```title="本站信息"
-标题：Zen
+标题：Shawn
 链接：https://myshawn.com
 图标：https://myshawn.com/images/favicon.png
 描述：🐎出门搔白首，若负平生志🗡
