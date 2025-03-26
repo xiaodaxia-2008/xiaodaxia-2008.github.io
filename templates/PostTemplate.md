@@ -1,10 +1,10 @@
 ---
 title: My Post Title
 authors:
-	- zen
+    - Shawn
 date:
     created: {{date:YYYY-MM-DDTHH:mm:ssZ}}
 categories:
-	- 随笔
+    - 默认
 ---
 
