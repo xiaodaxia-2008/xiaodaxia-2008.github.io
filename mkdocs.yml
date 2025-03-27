@@ -54,6 +54,7 @@ plugins:
         - 杂项
         - 日记
         - 随笔
+        - 摘抄
         - 小说
         - 诗
         - 历史
@@ -149,7 +150,7 @@ extra:
       link: mailto:<jacklee99@duck.com>
       name: 给我发邮件
     - icon: simple/rss
-      link: /feed_rss_created.xml
+      link: /feed_rss_updated.xml
       name: RSS订阅
     
   generator: true

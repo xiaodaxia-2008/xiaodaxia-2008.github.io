@@ -1,9 +1,7 @@
 ---
 title: My Post Title
 authors:
-    - Shawn
+  - Shawn
 date: {{date:YYYY-MM-DDTHH:mm:ss}}
-categories:
-    - 默认
 ---
 

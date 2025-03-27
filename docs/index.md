@@ -6,15 +6,13 @@ hide:
   - footer
 ---
 
-<h1 align="center">
-Shawn
-</h1>
+# [Shawn](blog/index.md) { .center }
 
 ![sleepy-cat](./images/sleepy-cat.png){ width="300px" data-title="路边两只互相依偎熟睡的橘猫" }
 ///caption
 ///
 
-:racehorse: **出门搔白首，若负平生志** :crossed_swords:
+[:racehorse: **出门搔白首，若负平生志** :crossed_swords:](blog/index.md)
 { .center }
 
 [:fontawesome-solid-blog:](blog/index.md)
