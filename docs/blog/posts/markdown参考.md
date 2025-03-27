@@ -1,7 +1,6 @@
 ---
 title: markdown参考
-date:
-    created: 2025-03-25T10:52:28+08:00
+date: 2025-03-25T10:52:28
 categories:
     - 常用工具
 tags:

@@ -1,8 +1,7 @@
 ---
 title: 友链
 comments: true
-date:
-    created: 2025-03-25T21:32:19+08:00
+date: 2025-03-25T21:32:19
 hide:
     - navigation
     - footer

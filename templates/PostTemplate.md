@@ -2,8 +2,7 @@
 title: My Post Title
 authors:
     - Shawn
-date:
-    created: {{date:YYYY-MM-DDTHH:mm:ssZ}}
+date: {{date:YYYY-MM-DDTHH:mm:ss}}
 categories:
     - 默认
 ---

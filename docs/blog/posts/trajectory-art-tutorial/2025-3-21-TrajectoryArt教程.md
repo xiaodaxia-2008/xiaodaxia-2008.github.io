@@ -1,9 +1,11 @@
 ---
 title: TrajectoryArt 轨迹规划教程
-date: 
-    created: 2025-03-21
-categories: [机器人学]
-tags: [机器人,轨迹规划]
+date: 2025-03-21T00:00:00
+categories: 
+    - 机器人学
+tags: 
+    - 机器人
+    - 轨迹规划
 ---
 
 
