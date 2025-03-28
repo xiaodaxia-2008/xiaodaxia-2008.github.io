@@ -1,11 +1,12 @@
 ---
 title: TrajectoryArt 轨迹规划教程
-date: 2025-03-21T00:00:00
+date: 2025-03-28T13:54:13
 categories: 
     - 机器人学
 tags: 
     - 机器人
     - 轨迹规划
+pin: true
 ---
 
 
@@ -385,3 +386,6 @@ plot_traj_components(traj)
 
 [^2]: 
     H. Pham and Q. -C. Pham, "A New Approach to Time-Optimal Path Parameterization Based on Reachability Analysis," in IEEE Transactions on Robotics, vol. 34, no. 3, pp. 645-659, June 2018, doi: 10.1109/TRO.2018.2819195.
+
+*2025-03-21*
+{ .signature }

@@ -58,6 +58,7 @@ plugins:
         - 小说
         - 诗
         - 历史
+        - 从前
         - 常用工具
         - 网络技术
         - 机器人学
@@ -118,6 +119,10 @@ markdown_extensions:
   - pymdownx.mark
   - pymdownx.tilde
   - pymdownx.blocks.caption
+  - toc:
+      slugify: !!python/object/apply:pymdownx.slugs.slugify
+        kwds:
+          case: lower
   - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
