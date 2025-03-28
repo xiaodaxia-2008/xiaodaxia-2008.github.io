@@ -28,7 +28,11 @@ hide:
 [🎇](./interesting/fireworks.html)
 { .center }
 
+
 ^^我所渴求的，无非是将心中脱颖欲出的本性付诸生活。为什么竟如此艰难呢？^^ (1)
 { .annotate .center }
 
 1. 赫尔曼·黑塞，或曰：我所追求的，不过是将我心中呼之欲出的本性付诸实践而已
+
+[前往博客](blog/index.md)
+{ .center }
