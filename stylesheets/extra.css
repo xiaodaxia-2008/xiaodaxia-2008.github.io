@@ -1,3 +1,10 @@
 .center {
     text-align: center;
 }
+
+.signature {
+    text-align: right;
+    font-size: medium;
+    font-style: italic;
+    margin-right: 20%;
+}
