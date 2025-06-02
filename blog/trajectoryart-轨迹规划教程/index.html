@@ -1017,7 +1017,7 @@
 <p><a href="https://github.com/xiaodaxia-2008/TrajectoryArtPub">TrajectoryArt</a>（以下简称TA）是用于生成机器人轨迹的c++/python库，它包含了很多算法，可以满足不同的需求。
 可以根据用户输入的一系列离散的路径点（waypoint），以及轨迹的速度、加速度约束等计算出时间最优的轨迹。</p>
 <figure>
-<p><a class="glightbox" href="../trajectory-art-tutorial/spiral_path.gif" data-type="image" data-width="auto" data-height="auto" data-title="轨迹路径" data-desc-position="bottom"><img alt="轨迹路径" loading="lazy" src="../trajectory-art-tutorial/spiral_path.gif" width="auto" /></a></p>
+<p><a class="glightbox" href="./spiral_path.gif" data-type="image" data-width="auto" data-height="auto" data-title="轨迹路径" data-desc-position="bottom"><img alt="轨迹路径" loading="lazy" src="./spiral_path.gif" width="auto" /></a></p>
 <figcaption>
 <p>使用贝塞尔曲线圆滑过度的轨迹路径</p>
 </figcaption>
@@ -1176,7 +1176,7 @@ q(t) &amp;= p(s(t)) \\
 <p>在c++中，<code>params</code>是的类型是<code class="language-c++ highlight"><span class="n">std</span><span class="o">::</span><span class="n">unordered_map</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">variant</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="p">,</span><span class="w"> </span><span class="kt">bool</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;&gt;&gt;</span></code> 。</p>
 </div>
 <p>以上就成功创建了一条轨迹，我们将它显示出来：</p>
-<p><a class="glightbox" href="../trajectory-art-tutorial/output_15_0.png" data-type="image" data-width="auto" data-height="auto" data-title="png" data-desc-position="bottom"><img alt="png" src="../trajectory-art-tutorial/output_15_0.png" /></a></p>
+<p><a class="glightbox" href="output_15_0.png" data-type="image" data-width="auto" data-height="auto" data-title="png" data-desc-position="bottom"><img alt="png" src="output_15_0.png" /></a></p>
 <p>该算法的计算速度很快，我们可以大致测试一下通过python封装的速度。</p>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="o">%%</span><span class="n">timeit</span> 
 </span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="n">traj</span> <span class="o">=</span> <span class="n">Trajectory</span><span class="o">.</span><span class="n">Create</span><span class="p">(</span><span class="n">waypoints</span><span class="p">,</span> <span class="n">params</span><span class="p">)</span>
@@ -1219,7 +1219,7 @@ q(t) &amp;= p(s(t)) \\
 </div>
 </div>
 </div>
-<p><a class="glightbox" href="../trajectory-art-tutorial/output_20_0.png" data-type="image" data-width="auto" data-height="auto" data-title="png" data-desc-position="bottom"><img alt="png" src="../trajectory-art-tutorial/output_20_0.png" /></a></p>
+<p><a class="glightbox" href="output_20_0.png" data-type="image" data-width="auto" data-height="auto" data-title="png" data-desc-position="bottom"><img alt="png" src="output_20_0.png" /></a></p>
 <p>从右下角图中可以看出，轨迹的刀具点速度是恒定不变的。但需要注意的是，该算法并不考虑各个自由度单独的速度、加速度限制，计算出来的轨迹可能导致某个自由度的速度、加速度超限。一般来讲，各个自由度的最大速度不会超过给定的最大匀速速度（只有单个自由度运动时，刀具点速度就是该自由度的速度）；但是各自由度的加速度在弧线段可能具有很大的值。</p>
 <p>比如我们将<code>speed</code>设置为500.0，重新计算，可以看到轨迹时间缩短，但是最大加速度也显著增加。使用该算法时，需要认真考虑是否会导致某个自由度的加速度超限。</p>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="n">params</span><span class="p">[</span><span class="s2">&quot;speed&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mf">500.0</span>
@@ -1227,7 +1227,7 @@ q(t) &amp;= p(s(t)) \\
 </span></code></pre></div>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="n">plot_traj_components</span><span class="p">(</span><span class="n">traj</span><span class="p">)</span>
 </span></code></pre></div>
-<p><a class="glightbox" href="../trajectory-art-tutorial/output_23_0.png" data-type="image" data-width="auto" data-height="auto" data-title="png" data-desc-position="bottom"><img alt="png" src="../trajectory-art-tutorial/output_23_0.png" /></a></p>
+<p><a class="glightbox" href="output_23_0.png" data-type="image" data-width="auto" data-height="auto" data-title="png" data-desc-position="bottom"><img alt="png" src="output_23_0.png" /></a></p>
 <h3 id="toppra-时间最优算法">TOPPRA 时间最优算法<sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup></h3>
 <p><a id="toppra"></a></p>
 <p>该算法可以针对任意C1连续的轨迹，计算出时间最优的参数 <span class="arithmatex">\(s(t)\)</span> ，相对于梯形速度算法，同等约束和路径下计算出来的轨迹时长一般会更短，但是计算量相对更大，计算耗时也稍微长一些。</p>
@@ -1273,7 +1273,7 @@ q(t) &amp;= p(s(t)) \\
 </div>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="n">plot_traj_components</span><span class="p">(</span><span class="n">traj</span><span class="p">)</span>
 </span></code></pre></div>
-<p><a class="glightbox" href="../trajectory-art-tutorial/output_26_0.png" data-type="image" data-width="auto" data-height="auto" data-title="png" data-desc-position="bottom"><img alt="png" src="../trajectory-art-tutorial/output_26_0.png" /></a></p>
+<p><a class="glightbox" href="output_26_0.png" data-type="image" data-width="auto" data-height="auto" data-title="png" data-desc-position="bottom"><img alt="png" src="output_26_0.png" /></a></p>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="o">%%</span><span class="n">timeit</span>
 </span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="n">traj</span> <span class="o">=</span> <span class="n">Trajectory</span><span class="o">.</span><span class="n">Create</span><span class="p">(</span><span class="n">waypoints</span><span class="p">,</span> <span class="n">params</span><span class="p">)</span>
 </span></code></pre></div>
@@ -1320,7 +1320,7 @@ q(t) &amp;= p(s(t)) \\
 </div>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="n">plot_traj_components</span><span class="p">(</span><span class="n">traj</span><span class="p">)</span>
 </span></code></pre></div>
-<p><a class="glightbox" href="../trajectory-art-tutorial/output_31_0.png" data-type="image" data-width="auto" data-height="auto" data-title="png" data-desc-position="bottom"><img alt="png" src="../trajectory-art-tutorial/output_31_0.png" /></a></p>
+<p><a class="glightbox" href="output_31_0.png" data-type="image" data-width="auto" data-height="auto" data-title="png" data-desc-position="bottom"><img alt="png" src="output_31_0.png" /></a></p>
 <p>从右下角图中可以看到刀具点速度不再有之前那样的波动，超过500的值都会被截断，轨迹的速度因而更加平滑。</p>
 <h2 id="总结">总结</h2>
 <p>在多种轨迹算法之中，我们需要根据应用情况具体来选择一种合适的，我们推荐如下几种使用场景：</p>
