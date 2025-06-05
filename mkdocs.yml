@@ -62,6 +62,7 @@ plugins:
         - 常用工具
         - 网络技术
         - 机器人学
+        - FiberArt
         - Python
         - C++
   - rss:
