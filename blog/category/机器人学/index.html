@@ -570,6 +570,8 @@
       
         
       
+        
+      
     
     
       
@@ -606,6 +608,30 @@
             分类
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../fiberart/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FiberArt
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
             
               
                 
@@ -738,6 +764,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#fiberart-中的连接路径计算方法" class="md-nav__link">
+    <span class="md-ellipsis">
+      FiberArt 中的连接路径计算方法
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#trajectoryart-轨迹规划教程" class="md-nav__link">
     <span class="md-ellipsis">
       TrajectoryArt 轨迹规划教程
@@ -863,6 +898,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#fiberart-中的连接路径计算方法" class="md-nav__link">
+    <span class="md-ellipsis">
+      FiberArt 中的连接路径计算方法
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#trajectoryart-轨迹规划教程" class="md-nav__link">
     <span class="md-ellipsis">
       TrajectoryArt 轨迹规划教程
@@ -885,6 +929,47 @@
       <header class="md-typeset">
         <h1 id="机器人学">机器人学</h1>
       </header>
+      
+        <article class="md-post md-post--excerpt">
+  <header class="md-post__header">
+    
+    <div class="md-post__meta md-meta">
+      <ul class="md-meta__list">
+        <li class="md-meta__item">
+          <time datetime="2025-06-05 10:11:29+00:00">2025年6月5日星期四</time></li>
+        
+          <li class="md-meta__item">
+            分类于
+            
+              <a href="../fiberart/" class="md-meta__link">FiberArt</a>, 
+              <a href="./" class="md-meta__link">机器人学</a></li>
+        
+        
+          
+          <li class="md-meta__item">
+            
+              需要 1 分钟阅读时间
+            
+          </li>
+        
+      </ul>
+      
+    </div>
+  </header>
+  <div class="md-post__content md-typeset">
+    <h2 id="fiberart-中的连接路径计算方法"><a class="toclink" href="../../fiberart-%E4%B8%AD%E7%9A%84%E8%BF%9E%E6%8E%A5%E8%B7%AF%E5%BE%84%E8%AE%A1%E7%AE%97%E6%96%B9%E6%B3%95/">FiberArt 中的连接路径计算方法</a></h2>
+<h3 id="使用圆柱包络面"><a class="toclink" href="../../fiberart-%E4%B8%AD%E7%9A%84%E8%BF%9E%E6%8E%A5%E8%B7%AF%E5%BE%84%E8%AE%A1%E7%AE%97%E6%96%B9%E6%B3%95/#使用圆柱包络面">使用圆柱包络面</a></h3>
+<p>受到一个师弟的启发，在计算相邻的铺层的连接路径的时候，增加一种投影到包络面的算法。其实这个想法很久之间便有了，当时只是实现了投影到原本的铺放表面，然后再沿着法向量进行偏移，但是法向对于一些稍微复杂一点的曲面，效果不好，投影的路径经常有一半在上面，一半突然到下面。这个原因是当要投影的直线穿过中心点附近时，到上下两面的距离几乎相等，所以投影后的点会跳跃，造成投影曲线不连续。实际上如果包络面是严格的圆柱面，这种情况很少会出现，因为被投影直线要正好穿过圆柱的中心线，这个在浮点数的世界是很难精确表达的。</p>
+
+    
+      <nav class="md-post__action">
+        <a href="../../fiberart-%E4%B8%AD%E7%9A%84%E8%BF%9E%E6%8E%A5%E8%B7%AF%E5%BE%84%E8%AE%A1%E7%AE%97%E6%96%B9%E6%B3%95/">
+          继续阅读
+        </a>
+      </nav>
+    
+  </div>
+</article>
       
         <article class="md-post md-post--excerpt">
   <header class="md-post__header">

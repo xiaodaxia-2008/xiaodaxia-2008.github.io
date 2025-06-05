@@ -10,13 +10,11 @@
       
       
       
-        <link rel="canonical" href="https://blog.myshawn.com/blog/%E5%B9%B4%E5%91%B3%E6%98%AF%E4%BB%80%E4%B9%88%E5%91%B3%E9%81%93/">
+        <link rel="canonical" href="https://blog.myshawn.com/blog/fiberart-%E4%B8%AD%E7%9A%84%E8%BF%9E%E6%8E%A5%E8%B7%AF%E5%BE%84%E8%AE%A1%E7%AE%97%E6%96%B9%E6%B3%95/">
       
       
-        <link rel="prev" href="../%E5%B0%86%E8%B5%B4%E7%BC%85%E7%94%B8/">
+        <link rel="prev" href="../2025%E5%B9%B46%E6%9C%882%E6%97%A5/">
       
-      
-        <link rel="next" href="../%E8%AF%AD%E5%BD%95/">
       
       
         <link rel="alternate" type="application/rss+xml" title="RSS 订阅" href="../../feed_rss_created.xml">
@@ -27,7 +25,7 @@
     
     
       
-        <title>年味是什么味道 - Shawn</title>
+        <title>FiberArt 中的连接路径计算方法 - Shawn</title>
       
     
     
@@ -91,6 +89,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#使用圆柱包络面" class="md-skip">
+          跳转至
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -120,7 +123,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              年味是什么味道
+              FiberArt 中的连接路径计算方法
             
           </span>
         </div>
@@ -825,6 +828,83 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#使用圆柱包络面" class="md-nav__link">
+    <span class="md-ellipsis">
+      使用圆柱包络面
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#拓展到任意mesh曲面" class="md-nav__link">
+    <span class="md-ellipsis">
+      拓展到任意mesh曲面
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#自动计算最佳的包络面" class="md-nav__link">
+    <span class="md-ellipsis">
+      自动计算最佳的包络面
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="自动计算最佳的包络面">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#自动计算包络圆柱面" class="md-nav__link">
+    <span class="md-ellipsis">
+      自动计算包络圆柱面
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#偏移凸包" class="md-nav__link">
+    <span class="md-ellipsis">
+      偏移凸包
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#拟合凸包为一些常见的形状" class="md-nav__link">
+    <span class="md-ellipsis">
+      拟合凸包为一些常见的形状
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#总结" class="md-nav__link">
+    <span class="md-ellipsis">
+      总结
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -848,25 +928,6 @@
               </div>
             </div>
             
-              <div class="md-post__authors md-typeset">
-                
-                  <div class="md-profile md-post__profile">
-                    <span class="md-author md-author--long">
-                      <img src="../../images/sleepy-cat.png" alt="Shawn">
-                    </span>
-                    <span class="md-profile__description">
-                      <strong>
-                        
-                          <a href="https://myshawn.com/about">Shawn</a>
-                        
-                      </strong>
-                      <br>
-                      出门搔白首，若负平生志🐎🗡
-                    </span>
-                  </div>
-                
-              </div>
-            
             <ul class="md-post__meta md-nav__list">
               <li class="md-nav__item md-nav__item--section">
                 <div class="md-post__title">
@@ -879,7 +940,7 @@
                     <li class="md-nav__item">
                       <div class="md-nav__link">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 19H5V8h14m-3-7v2H8V1H6v2H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-1V1m-1 11h-5v5h5z"/></svg>
-                        <time datetime="2017-02-08 12:18:20+00:00" class="md-ellipsis">2017年2月8日星期三</time>
+                        <time datetime="2025-06-05 10:11:29+00:00" class="md-ellipsis">2025年6月5日星期四</time>
                       </div>
                     </li>
                     
@@ -890,7 +951,8 @@
                           <span class="md-ellipsis">
                             分类于
                             
-                              <a href="../category/%E4%BB%8E%E5%89%8D/">从前</a></span>
+                              <a href="../category/fiberart/">FiberArt</a>, 
+                              <a href="../category/%E6%9C%BA%E5%99%A8%E4%BA%BA%E5%AD%A6/">机器人学</a></span>
                         </div>
                       </li>
                     
@@ -928,35 +990,47 @@
       
       
       
-        <span class="md-tag">随笔</span>
+        <span class="md-tag">FiberArt</span>
+      
+    
+      
+      
+      
+        <span class="md-tag">连接路径</span>
       
     
   </nav>
 
 
 
-  <h1>年味是什么味道</h1>
+  <h1>FiberArt 中的连接路径计算方法</h1>
 
-<p>回到家中，屋内一片狼藉。花了小半天时间，整理故旧，拖洗地板，终于收拾得有模有样。<br />
-已经距腊八过去了一周多，实在没有想到家里还留了一点腊八粥，这是五六年都不曾闻过的美味。熬一锅腊八是要准备好久的。外婆以前总是头天晚上就把剥了皮的玉米下锅，然后煮一煮，陆续放上大豆，四季豆，胡萝卜，以及各种调料，在锅里要熬一整晚，第二天早上才能熟，也许早就熟了，要的可能是一种需用时间和感情融入的味道。十年前，过腊八，早上会起的很早，满满的一锅，盛好几碗，先给邻居送过去，顺便送几个麻花，然后才会自家吃。等过一会，邻居又会端着碗回赠一些东西，可能还是腊八，但各家材料口味各不同的，有时候可能是甑糕，有的人也可能什么也不做的。然后这东西就会吃好几天，虽然没有电冰箱，天气早是滴水成冰，放不坏的，邻里之间一个热衷的话题就是谁家做的腊八好吃，谁家蒸的甑糕多黏。</p>
+<h2 id="使用圆柱包络面">使用圆柱包络面</h2>
+<p>受到一个师弟的启发，在计算相邻的铺层的连接路径的时候，增加一种投影到包络面的算法。其实这个想法很久之间便有了，当时只是实现了投影到原本的铺放表面，然后再沿着法向量进行偏移，但是法向对于一些稍微复杂一点的曲面，效果不好，投影的路径经常有一半在上面，一半突然到下面。这个原因是当要投影的直线穿过中心点附近时，到上下两面的距离几乎相等，所以投影后的点会跳跃，造成投影曲线不连续。实际上如果包络面是严格的圆柱面，这种情况很少会出现，因为被投影直线要正好穿过圆柱的中心线，这个在浮点数的世界是很难精确表达的。</p>
 <!-- more -->
 
-<p>这样的节日和每年的二月二挺类似，过那个节日风行家家户户炒豆子，有玉米，大豆，豌豆，有甜的，咸的，辣的，我们去学校每人口袋里装的满满的，一路上边吃边砸，到了教室可不好了，豆子吃多常会放屁的……<br />
-腊月二十三的时候，还要烙十几个饼祭灶，晚上摆在碟子里，点三根香，早上起来，把每个饼掐下一块抱在纸里，扔到屋顶去喂野鸽子，再把灶王爷撕下来烧了，除夕再贴上新的。<br />
-还要再蒸一天的馒头和包子，要足够家人和客人吃过元宵。还的用细面条做成几个佛像，嵌上几个红枣，有时候用辣椒，记得还有找不到两者而急中生智用红色塑料袋的，这大概是佛的眼睛，看起来特别像大肚弥勒。蒸熟馒头也是先给灶王爷贡上一碗，然后用筷子串一个插在门上，告诉外人这家是在蒸馍。蒸来的馒头比平时多出四五倍，用一个很大的筛子装起来，还的防着老鼠，猫之类的。<br />
-以及过年总感觉是有很多事情要做的，为了做一件事情得提前准备很久，人们很认真的购买年货。现在不知道还有几个人会煞费苦心花一夜时间的熬一锅腊八，提前一天揉面发面烙几个坨坨饼，然后再发几盆子面蒸五六锅馒头，蒸好几种包子，蒸几个花花馍来。</p>
-<p>大家都去买加了增白剂的馒头，包子，饼，除夕的饺子也可以是速冻的，腊八粥更是经年不知其味，过年就是大人天天麻将桌，小孩天天台球桌，或者电脑桌，肉熟了就行，何必慢条斯理的文火去炖。以前觉得没有年味是因为长大了，年是给小孩子过得，现在觉得，可能是那个时代已经随我的童年一样一去不返了，每个时代有自己独特的生活方式，现代人再穷也不会像以前那样饿死，也不能普遍过上美国人的生活。大时代的发展裹挟着我们一起跌荡，人们如同在荡一架固定在过山车上的秋千。</p>
-<p>孩子越来越少，仅剩的那些孩子宁愿把钱去买烟抽也不愿买一盒擦炮，夜晚在路边不是一群放炮放烟花放理想的少年，而是一群群嘴里叼根烟没涵养没礼貌的……家长的粗暴造就了孩子的野纵……<br />
-希望过一个年，我所认识的见到的朋友，人啊，都能长大一点，善良一点，愿每个人的世界都更美好……<br />
-即便是陌生人也送你祝福，<br />
-愿你在尘世获得幸福，<br />
-愿有情人终成眷属！<br />
-我只愿有一个书房，<br />
-一个好的好朋友，<br />
-面朝南山，<br />
-春暖花开。</p>
-<p><em>2015年12月</em></p>
-<p><em>2016-07-11</em></p>
+<p><a class="glightbox" href="../FiberArt/attachments/project-to-cylinder-issue.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../FiberArt/attachments/project-to-cylinder-issue.jpg" /></a></p>
+<p>那么使用圆柱作为包络面就几乎不会有什么问题，于是进行了以下测试，结果如下:</p>
+<p><a class="glightbox" href="../FiberArt/attachments/Pasted%20image%2020250605111630.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../FiberArt/attachments/Pasted%20image%2020250605111630.png" /></a></p>
+<p>可以看到，效果基本上还可以，但是美中不足的是，连接路径似乎不是最短的路径，总觉得它在靠近两端的地方多了一些弯曲，导致整体的路径似乎不是最优的。</p>
+<p>之前我已经实现 了在mesh上计算两点之间 的最短路径，如果把圆柱面转换为mesh，然后计算mesh上两点之间的最短路径，因该会得到更好的结果；这是可行的，但是没有必要，对于圆柱面来说，有更加简单高效的方法。</p>
+<p>圆柱面的展开是一个矩形，计算圆柱面上两点之间的最短路径，可以转换到这个矩形上，很显然在矩形区域内任意两点间的最短路径就是连接两点的直线段；把这条直线段重新投影到圆柱面上就是三维圆柱面上两点的最短路径了。</p>
+<p><a class="glightbox" href="../FiberArt/attachments/Pasted%20image%2020250605112259.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../FiberArt/attachments/Pasted%20image%2020250605112259.png" /></a>
+图中稍微粗一点的是使用圆柱面上的最短路径算法，细一点的是使用圆柱面上的投影路径算法；显然，最短路径算法的曲率更小、距离更短，能够减少运行时间。</p>
+<h2 id="拓展到任意mesh曲面">拓展到任意mesh曲面</h2>
+<p>上面是仅仅限于用圆柱面作为包络面，如果铺放的曲面和圆柱比较接近，那么没有问题 ；如果相差太大，使用圆柱面作为包络面，会导致连接路径太冗余了，还可能超过机器人的运动范围。因此，应该允许用户自己定义使用怎样的包络曲面，他可能会提前在CAD软件里面已经设计好包络面（安全退刀面）了。</p>
+<p>在FiberArt里面，我们将用户自定义的包络面先转化为mesh，而mesh已经是实现了点的投影算法和计算两点之间最短路径的算法，所以用mesh还是用圆柱面来计算连接路径的过程是相同的。</p>
+<h2 id="自动计算最佳的包络面">自动计算最佳的包络面</h2>
+<p>上文提到，用户可以自己在CAD中设计包络面，那么有没有方法可以自动计算出一个还不错的包络面呢？</p>
+<p>这里我想到的大概有以下几种：</p>
+<h3 id="自动计算包络圆柱面">自动计算包络圆柱面</h3>
+<p>包络圆柱面可以用铺放曲面的包围盒（bounding box）计算，把最长的轴 作为圆柱的中心线，然后计算外接圆柱；这种算法会比较高效，实现也简单，缺点就是冗余太多了，只有在铺放曲面是类圆柱的回转体时，才能算得上接近最优。</p>
+<h3 id="偏移凸包">偏移凸包</h3>
+<p>可以先计算铺放曲面的凸包，然后沿着法向量偏移凸包的每个顶点，可以大致算出来一个比较紧凑的包络面。这个算法实现应该也不难，有很多开源库可以计算凸包，而且对凸包进行法向量偏移应该不会导致偏移后的mesh自相交。</p>
+<h3 id="拟合凸包为一些常见的形状">拟合凸包为一些常见的形状</h3>
+<p>单纯使用凸包，可能导致包络面过于复杂，最终计算的路径不够平滑；如果事先定义一些常见的形状的，比如圆柱、圆锥、椭圆锥等，将凸包拟合成最相似的标准形状，这样不光会简化后续的路径计算，也会获得更加光滑的路径结果。</p>
+<h2 id="总结">总结</h2>
+<p>以上是最近对FiberArt里面连接路径计算方法的一些改进，当然了，提到的某些想法还没有实现，自动计算凸包这个可能会是一个比较便捷的功能。</p>
 
 
 
@@ -1046,7 +1120,7 @@
       <nav class="md-footer__inner md-grid" aria-label="页脚" >
         
           
-          <a href="../%E5%B0%86%E8%B5%B4%E7%BC%85%E7%94%B8/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 将赴缅甸">
+          <a href="../2025%E5%B9%B46%E6%9C%882%E6%97%A5/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 2025年6月2日">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -1056,27 +1130,11 @@
                 上一页
               </span>
               <div class="md-ellipsis">
-                将赴缅甸
+                2025年6月2日
               </div>
             </div>
           </a>
         
-        
-          
-          <a href="../%E8%AF%AD%E5%BD%95/" class="md-footer__link md-footer__link--next" aria-label="下一页: 语录">
-            <div class="md-footer__title">
-              <span class="md-footer__direction">
-                下一页
-              </span>
-              <div class="md-ellipsis">
-                语录
-              </div>
-            </div>
-            <div class="md-footer__button md-icon">
-              
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
-            </div>
-          </a>
         
       </nav>
     
