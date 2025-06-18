@@ -35,7 +35,11 @@ github上可能star最高的markdown编辑器吧，所见即所得，曾经用�
 
 ### [Obsidian](https://obsidian.md)
 
-专注于Markdown笔记的应用，有很多插件，性能也很好。👍👍👍👍👍
+专注于Markdown笔记的应用，有很多插o，性能也很好。👍👍👍👍👍
+
+### [quartz](https://github.com/jackyzha0/quartz)
+
+quartz 可以把markdown编写的文档转化为 html 静态站点，它可以兼容上述提到的 [Obisian](#obsidian) 的 markdown 格式。
 
 ### VSCode
 

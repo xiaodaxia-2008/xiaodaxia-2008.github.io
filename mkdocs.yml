@@ -41,32 +41,24 @@ theme:
         icon: material/brightness-4
         name: Switch to light mode
 
-
-plugins: 
+plugins:
+  - mkdocs-jupyter: # for Jupyter notebook support
+      include: ["notebooks/*.ipynb"]
+      remove_tag_config:
+        remove_cell_tags:
+          - remove_cell
+        remove_all_output_tags:
+          - remove_output
+        remove_input_tags:
+          - remove_input
   - blog:
       blog_dir: blog
       blog_toc: true
       post_date_format: full
       post_url_format: "{slug}"
       post_excerpt: optional
-      categories_allowed:
-        - 默认
-        - 杂项
-        - 日记
-        - 随笔
-        - 摘抄
-        - 小说
-        - 诗
-        - 历史
-        - 从前
-        - 常用工具
-        - 网络技术
-        - 机器人学
-        - FiberArt
-        - Python
-        - C++
   - rss:
-      match_path: blog/posts/.*
+      match_path: "(blog/posts|notebooks)/.*"
       use_git: false
       categories:
         - categories
@@ -97,19 +89,24 @@ plugins:
 
 nav:
   - 主页: index.md
-  - 博客: 
-    - blog/index.md
+  - 博客:
+      - blog/index.md
+  - Python 系列:
+      - notebooks/README.md
   - 友链: links.md
   - 关于: about.md
-
 
 markdown_extensions:
   - pymdownx.arithmatex:
       generic: true
   - attr_list
   - abbr
+  - callouts
+  - github-callouts
   - tables
   - md_in_html
+  - markdown_captions # generate figure caption from alt text
+  - mdx_wikilink_plus
   - admonition
   - pymdownx.details
   - pymdownx.superfences
@@ -158,7 +155,7 @@ extra:
     - icon: simple/rss
       link: /feed_rss_updated.xml
       name: RSS订阅
-    
+
   generator: true
 
 copyright: Copyright &copy, 2024 - 2026 Zen
