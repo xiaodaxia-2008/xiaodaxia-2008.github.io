@@ -66,7 +66,6 @@ pure-eval==0.2.3
 pygments==2.19.1
 pymdown-extensions==10.14.3
 python-dateutil==2.9.0.post0
-pywin32==310
 pyyaml==6.0.2
 pyyaml-env-tag==0.1
 pyzmq==27.0.0
