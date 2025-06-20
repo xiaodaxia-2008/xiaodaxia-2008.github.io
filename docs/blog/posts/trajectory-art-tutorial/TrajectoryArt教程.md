@@ -15,10 +15,8 @@ pin: true
 [TrajectoryArt](https://github.com/xiaodaxia-2008/TrajectoryArtPub)（以下简称TA）是用于生成机器人轨迹的c++/python库，它包含了很多算法，可以满足不同的需求。
 可以根据用户输入的一系列离散的路径点（waypoint），以及轨迹的速度、加速度约束等计算出时间最优的轨迹。
 
-![轨迹路径](./spiral_path.gif){ width=auto loading=lazy }
-/// caption
-使用贝塞尔曲线圆滑过度的轨迹路径
-///
+![使用贝塞尔曲线圆滑过度的轨迹路径](./spiral_path.gif){ width=auto loading=lazy }
+
 
 <!-- more -->
 
@@ -164,7 +162,7 @@ TA使用统一的接口 `#!python traj = Trajectory.Create(waypoints, params)`(1
 以上就成功创建了一条轨迹，我们将它显示出来：
 
     
-![png](output_15_0.png)
+![梯形速度算法轨迹结果](output_15_0.png)
     
 
 该算法的计算速度很快，我们可以大致测试一下通过python封装的速度。
@@ -219,7 +217,7 @@ traj = Trajectory.Create(waypoints, params)
     ```
 
     
-![png](output_20_0.png)
+![梯形匀速算法轨迹结果](output_20_0.png)
     
 
 
@@ -240,7 +238,7 @@ plot_traj_components(traj)
 
 
     
-![png](output_23_0.png)
+![梯形匀速算法轨迹结果](output_23_0.png)
     
 
 
@@ -299,7 +297,7 @@ plot_traj_components(traj)
 
 
     
-![png](output_26_0.png)
+![TOPPRA 时间最优算法](output_26_0.png)
     
 
 
@@ -365,7 +363,7 @@ plot_traj_components(traj)
 
 
     
-![png](output_31_0.png)
+![时间最优的匀速算法](output_31_0.png)
     
 
 
