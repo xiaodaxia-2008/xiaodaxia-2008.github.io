@@ -7,6 +7,9 @@ theme:
   logo: images/favicon.png
   favicon: images/favicon.png
   custom_dir: overrides
+  icon:
+    edit: material/pencil
+    view: material/eye
   features:
     - navigation.sections
     - navigation.indexes
@@ -21,6 +24,8 @@ theme:
     - content.code.copy
     - content.code.select
     - content.tabs.link
+    - content.action.edit
+    - content.action.view
 
   palette:
     - media: "(prefers-color-scheme)"
@@ -158,5 +163,9 @@ extra:
       name: RSS订阅
 
   generator: true
+
+repo_name: Zen's Garden
+repo_url: https://github.com/xiaodaxia-2008/xiaodaxia-2008.github.io
+edit_uri: edit/blog/docs/
 
 copyright: Copyright &copy, 2024 - 2026 Zen
