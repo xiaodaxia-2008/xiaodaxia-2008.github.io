@@ -972,7 +972,6 @@
 <p><a class="glightbox" href="images/sleepy-cat.png" data-type="image" data-width="auto" data-height="auto" data-title="路边两只互相依偎熟睡的橘猫" data-desc-position="bottom"><img alt="" data-title="路边两只互相依偎熟睡的橘猫" src="images/sleepy-cat.png" width="300px" /></a></p>
 <figcaption></figcaption>
 </figure>
-<p class="center"><a href="blog/"><img alt="🐎" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f40e.svg" title=":racehorse:" /> <strong>出门搔白首，若负平生志</strong> <img alt="⚔" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2694.svg" title=":crossed_swords:" /></a></p>
 <p class="center"><a href="blog/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M192 32c0 17.7 14.3 32 32 32 123.7 0 224 100.3 224 224 0 17.7 14.3 32 32 32s32-14.3 32-32C512 128.9 383.1 0 224 0c-17.7 0-32 14.3-32 32m0 96c0 17.7 14.3 32 32 32 70.7 0 128 57.3 128 128 0 17.7 14.3 32 32 32s32-14.3 32-32c0-106-86-192-192-192-17.7 0-32 14.3-32 32m-96 16c0-26.5-21.5-48-48-48S0 117.5 0 144v224c0 79.5 64.5 144 144 144s144-64.5 144-144-64.5-144-144-144h-16v96h16c26.5 0 48 21.5 48 48s-21.5 48-48 48-48-21.5-48-48z"/></svg></span></a>
 &nbsp;
 <a href="https://space.bilibili.com/231692492/dynamic?spm_id_from=333.1365.my-info.dyns.click"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17.813 4.653h.854q2.266.08 3.773 1.574Q23.946 7.72 24 9.987v7.36q-.054 2.266-1.56 3.773c-1.506 1.507-2.262 1.524-3.773 1.56H5.333q-2.266-.054-3.773-1.56C.053 19.614.036 18.858 0 17.347v-7.36q.054-2.267 1.56-3.76t3.773-1.574h.774l-1.174-1.12a1.23 1.23 0 0 1-.373-.906q0-.534.373-.907l.027-.027q.4-.373.92-.373t.92.373L9.653 4.44q.107.106.187.213h4.267a.8.8 0 0 1 .16-.213l2.853-2.747q.4-.373.92-.373c.347 0 .662.151.929.4s.391.551.391.907q0 .532-.373.906zM5.333 7.24q-1.12.027-1.88.773-.76.748-.786 1.894v7.52q.026 1.146.786 1.893t1.88.773h13.334q1.12-.026 1.88-.773t.786-1.893v-7.52q-.026-1.147-.786-1.894t-1.88-.773zM8 11.107q.56 0 .933.373.375.374.4.96v1.173q-.025.586-.4.96-.373.375-.933.374c-.56-.001-.684-.125-.933-.374q-.375-.373-.4-.96V12.44q0-.56.386-.947.387-.386.947-.386m8 0q.56 0 .933.373.375.374.4.96v1.173q-.025.586-.4.96-.373.375-.933.374c-.56-.001-.684-.125-.933-.374q-.375-.373-.4-.96V12.44q.025-.586.4-.96.373-.373.933-.373"/></svg></span></a>
@@ -984,11 +983,146 @@
 <a href="/feed_rss_created.xml"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19.199 24C19.199 13.467 10.533 4.8 0 4.8V0c13.165 0 24 10.835 24 24zM3.291 17.415a3.3 3.3 0 0 1 3.293 3.295A3.303 3.303 0 0 1 3.283 24C1.47 24 0 22.526 0 20.71s1.475-3.294 3.291-3.295M15.909 24h-4.665c0-6.169-5.075-11.245-11.244-11.245V8.09c8.727 0 15.909 7.184 15.909 15.91"/></svg></span></a>
 &nbsp;
 <a href="interesting/fireworks.html">🎇</a></p>
-<p class="annotate center"><ins>我所渴求的，无非是将心中脱颖欲出的本性付诸生活。为什么竟如此艰难呢？</ins> (1)</p>
-<ol>
-<li>赫尔曼·黑塞，或曰：我所追求的，不过是将我心中呼之欲出的本性付诸实践而已</li>
-</ol>
-<p class="center"><a href="blog/">前往博客</a></p>
+<div style="text-align: center;">
+    <p id="typewriter-title" class="title-typewriter"></p>
+
+    <p id="typewriter-quote" class="quote-typewriter" style="visibility: hidden;"></p>
+
+    <div id="redirect-controls" style="visibility: hidden; margin-top: 1.5em;">
+        <div style="display: flex; justify-content: center; align-items: center; flex-wrap: wrap;">
+            <p id="redirect-message" class="redirect-text"></p>
+            <div style="margin: 5px;">
+                <button id="redirect-now-btn" class="redirect-btn">迫不及待</button>
+                <button id="cancel-redirect-btn" class="redirect-btn">留在这里</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    /* 标题样式 */
+    .title-typewriter {
+        font-size: 1.1em;
+        font-weight: bold;
+        font-family: 'KaiTi', 'STKaiti', '楷体', serif;
+        margin-bottom: 1.5em; /* 增加与下方引文的间距 */
+    }
+    /* 引文样式 */
+    .quote-typewriter {
+        font-size: 1.1em;
+        font-family: 'KaiTi', 'STKaiti', '楷体', serif;
+    }
+    /* 跳转提示文字样式 */
+    .redirect-text {
+        color: #aaaaaa; 
+        font-size: 0.9em; 
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; 
+        margin: 5px;
+    }
+    /* 闪烁的光标效果 (通用) */
+    .typing-cursor::after {
+        content: '▋';
+        display: inline-block;
+        animation: blink-caret .75s step-end infinite;
+        color: #ff6347;
+        margin-left: 0.2em;
+    }
+    @keyframes blink-caret {
+        from, to { opacity: 1; }
+        50% { opacity: 0; }
+    }
+    /* 跳转按钮样式 */
+    .redirect-btn {
+        background: none; border: none; padding: 0;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        color: #999;
+        font-size: 0.9em;
+        margin: 0 8px;
+        cursor: pointer;
+        transition: color 0.2s;
+    }
+    .redirect-btn:hover {
+        color: #333;
+        text-decoration: underline;
+    }
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // -- 要显示的文本 --
+    // 注意：我们直接使用 Emoji 字符 🐎 和 ⚔️，比 Markdown 短代码更可靠
+    const titleText = "🐎 出门搔白首，若负平生志 ⚔️";
+    const quoteText = "我所渴求的，无非是将心中脱颖欲出的本性付诸生活。为什么竟如此艰难呢？";
+
+    // -- 获取元素 --
+    const titleElement = document.getElementById('typewriter-title');
+    const quoteElement = document.getElementById('typewriter-quote');
+    const redirectControlsElement = document.getElementById('redirect-controls');
+    const redirectMessageElement = document.getElementById('redirect-message');
+    const redirectNowBtn = document.getElementById('redirect-now-btn');
+    const cancelRedirectBtn = document.getElementById('cancel-redirect-btn');
+
+    let countdownInterval;
+
+    // -- 核心功能函数 --
+    function typeWriter(element, text, speed, onComplete) {
+        let i = 0;
+        element.classList.add('typing-cursor');
+        const interval = setInterval(() => {
+            if (i < text.length) {
+                element.innerHTML = text.substring(0, i + 1);
+                i++;
+            } else {
+                clearInterval(interval);
+                element.classList.remove('typing-cursor');
+                if (onComplete) onComplete();
+            }
+        }, speed);
+    }
+
+    function startRedirectCountdown(seconds) {
+        redirectControlsElement.style.visibility = 'visible';
+        let remaining = seconds;
+        const updateMessage = () => {
+            redirectMessageElement.innerHTML = `<strong>${remaining}</strong> 秒后自动前往博客...`;
+        };
+        updateMessage();
+        countdownInterval = setInterval(() => {
+            remaining--;
+            updateMessage();
+            if (remaining <= 0) {
+                clearInterval(countdownInterval);
+                window.location.href = '/blog';
+            }
+        }, 1000);
+    }
+
+    // -- 按钮事件 --
+    redirectNowBtn.addEventListener('click', () => {
+        if(countdownInterval) clearInterval(countdownInterval);
+        window.location.href = '/blog';
+    });
+
+    cancelRedirectBtn.addEventListener('click', () => {
+        if(countdownInterval) clearInterval(countdownInterval);
+        redirectControlsElement.style.visibility = 'hidden';
+    });
+
+    // -- **动画执行链** --
+    // 1. 首先，执行标题的打字机动画
+    typeWriter(titleElement, titleText, 150, () => {
+        // 2. 标题完成后，让引文容器可见，并开始引文的打字机动画
+        quoteElement.style.visibility = 'visible';
+        typeWriter(quoteElement, quoteText, 120, () => {
+            // 3. 引文完成后，等待片刻，然后启动跳转倒计时
+            setTimeout(() => {
+                startRedirectCountdown(5);
+            }, 500);
+        });
+    });
+});
+</script>
+
 <!-- hide view/edit source for home page https://github.com/squidfunk/mkdocs-material/discussions/5064 -->
 <style>
   .md-content__button {
