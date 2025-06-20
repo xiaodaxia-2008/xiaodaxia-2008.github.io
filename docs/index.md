@@ -36,3 +36,10 @@ hide:
 
 [前往博客](blog/index.md)
 { .center }
+
+<!-- hide view/edit source for home page https://github.com/squidfunk/mkdocs-material/discussions/5064 -->
+<style>
+  .md-content__button {
+    display: none;
+  }
+</style>

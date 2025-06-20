@@ -61,3 +61,10 @@ hide:
 图标：https://myshawn.com/images/favicon.png
 描述：🐎出门搔白首，若负平生志🗡
 ```
+
+
+<style>
+  .md-content__button {
+    display: none;
+  }
+</style>

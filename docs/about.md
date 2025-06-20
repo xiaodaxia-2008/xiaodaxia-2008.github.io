@@ -40,3 +40,10 @@ hide:
 联系方式 <jacklee99@duck.com> ，也可以在下方评论区留言。
 
 *[AFP]: Automated Fiber Placement
+
+
+<style>
+  .md-content__button {
+    display: none;
+  }
+</style>

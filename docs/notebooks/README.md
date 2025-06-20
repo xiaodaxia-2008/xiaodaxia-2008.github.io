@@ -11,3 +11,13 @@ hide:
 ## Python 奇巧淫记
 
 - [[使用Python装饰器减少重复代码]]
+
+
+
+
+
+<style>
+  .md-content__button {
+    display: none;
+  }
+</style>
