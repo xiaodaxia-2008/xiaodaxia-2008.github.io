@@ -108,6 +108,7 @@ markdown_extensions:
   - attr_list
   - abbr
   - callouts
+  - def_list
   - github-callouts
   - tables
   - md_in_html
