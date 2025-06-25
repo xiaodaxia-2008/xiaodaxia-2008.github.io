@@ -1,5 +1,5 @@
 ---
-title: My Post Title
+title: {{title}}
 authors:
   - Shawn
 date: {{date:YYYY-MM-DDTHH:mm:ss}}
