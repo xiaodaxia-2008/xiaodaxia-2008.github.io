@@ -1,3 +1,10 @@
+---
+title: VSCode 集成 VS Dev Command Prompt
+authors:
+  - Shawn
+date: 2025-07-24T22:45:13
+---
+
 
 1. 按Ctrl+P打开命令面板，搜索 "Open User Settings (Json)"，打开json配置文件
 2. 添加如下代码：
@@ -20,3 +27,7 @@
 ```
 
 引号什么的搞了好久，木乱。
+
+
+
+*2025-07-24 22:45:13*
