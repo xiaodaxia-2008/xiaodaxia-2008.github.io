@@ -8,6 +8,8 @@ categories:
 ---
 FiberArt 包含路径规划、仿真、后处理三大块，一般来说 FiberArt 中的铺层路径都是由 FiberArt 软件的路径规划算法计算得到的，计算出来的铺层可以导出为 FiberArt 的专有二进制格式（后缀名为 .afscene 或者 .afnode）。如果用户使用第三方的算法算出了铺层的路径，想要导入到 FiberArt 中来，就需要一种新的中间格式，为了方便起见，在最新版 FiberArt（0.13.9）中，我们采用了 [JSON](https://www.json.org/json-en.html) 格式作为铺层导入导出的中间格式。
 
+<!-- more -->
+
 ## 导出铺层
 
 在 FiberArt 中，先在场景树中选中要导出的铺层（Ply）节点，然后点击 `文件》导出》导出铺层`，在弹出的文件对话框中选择要保存的文件路径及名称，文件名应该以 `.json` 的后缀结束。导出铺层之后，可以使用 NotePad、VSCode 之类的编辑器打开查看。

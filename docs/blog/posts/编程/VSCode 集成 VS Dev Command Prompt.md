@@ -4,7 +4,9 @@ authors:
   - Shawn
 date: 2025-07-24T22:45:13
 ---
+记录一下如何在VSCode中添加MSVC的Dev环境。
 
+<!-- more -->
 
 1. 按Ctrl+P打开命令面板，搜索 "Open User Settings (Json)"，打开json配置文件
 2. 添加如下代码：
