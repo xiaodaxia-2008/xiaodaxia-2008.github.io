@@ -14,6 +14,7 @@ date: 2025-07-24T22:45:13
 ```json
  "terminal.integrated.profiles.windows": {
     "VS Dev Command Prompt": {
+      "overrideName": true,
       "path": [
         "pwsh.exe"
       ],
