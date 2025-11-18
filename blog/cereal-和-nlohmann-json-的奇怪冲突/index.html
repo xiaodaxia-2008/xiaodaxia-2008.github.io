@@ -1167,6 +1167,8 @@
 <h1 id="cereal-和-nlohmann-json-的奇怪冲突">cereal 和 nlohmann-json 的奇怪冲突</h1>
 <h2 id="问题描述">问题描述</h2>
 <p>最近在处理一个对象同时支持 <code>cereal</code> 和 <code>nlohmann-json</code> 序列化时，遇到了一个奇怪的问题。具体来说，当定义了序列化函数，同时支持这两种序列化库时，程序会出现编译错误。</p>
+<!-- more -->
+
 <p>下面是简化后的代码示例：</p>
 <div class="language-c++ highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;cereal/archives/binary.hpp&gt;</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;nlohmann/json.hpp&gt;</span>
