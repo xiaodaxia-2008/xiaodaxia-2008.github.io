@@ -1,9 +1,7 @@
 ---
-title: "In Defense of C++"
+title: In Defense of C++
 date: 2025-09-12
-description: "C++的声誉经常因其复杂性而受到批评。与cpp,编程,c,讨论。"
-tags:
-  - c++
+description: C++的声誉经常因其复杂性而受到批评。与cpp,编程,c,讨论。
 ---
 
 原文：[In denfense of C++](https://dev.to/dayvster/in-defense-of-c-1g7l)
