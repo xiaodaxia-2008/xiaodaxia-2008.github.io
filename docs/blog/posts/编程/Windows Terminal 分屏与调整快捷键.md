@@ -1,3 +1,16 @@
+---
+title: Windows Terminal 分屏与调整快捷键
+authors:
+  - Shawn
+date: 2026-04-16T16:44:39
+tags:
+  - 终端
+---
+
+
+
+*2026-04-16 16:44:39*
+
 # Windows Terminal 分屏与调整常用快捷键总结
 
 本指南总结了 Windows Terminal 中处理窗格（Panes）的核心操作。
