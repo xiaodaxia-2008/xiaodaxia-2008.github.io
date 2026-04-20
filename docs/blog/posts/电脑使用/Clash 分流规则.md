@@ -37,6 +37,7 @@ tags:
 这个是专门针对 Andorid 平台
 [GitHub - MetaCubeX/ClashMetaForAndroid: A rule-based tunnel for Android.](https://github.com/MetaCubeX/ClashMetaForAndroid)
 
+[友情链接 - Clash Verge Rev Docs](https://www.clashverge.dev/friendship.html)
 
 
 ## Clash 中自定义分流规则
