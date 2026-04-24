@@ -1044,6 +1044,138 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#连接本地-http-服务" class="md-nav__link">
+    <span class="md-ellipsis">
+      连接本地 http 服务
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#协议配置" class="md-nav__link">
+    <span class="md-ellipsis">
+      协议配置
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="协议配置">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cloudflared-协议设置说明" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cloudflared 协议设置说明
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Cloudflared 协议设置说明">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-默认行为" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. 默认行为
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-手动指定协议" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. 手动指定协议
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. 手动指定协议">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#方法一命令行" class="md-nav__link">
+    <span class="md-ellipsis">
+      方法一：命令行
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-可选协议类型" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. 可选协议类型
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-使用建议" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. 使用建议
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-常见问题" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. 常见问题
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. 常见问题">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#quic-连接失败" class="md-nav__link">
+    <span class="md-ellipsis">
+      QUIC 连接失败
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-日志确认" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. 日志确认
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#为什么用-更low的http2呢" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧠为什么用 更low的http2呢？
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1123,7 +1255,7 @@
                           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7z"/></svg>
                           <span class="md-ellipsis">
                             
-                              需要 1 分钟阅读时间
+                              需要 2 分钟阅读时间
                             
                           </span>
                         </div>
@@ -1179,8 +1311,6 @@
   
 
 
-  <h1>使用cloudflare tunnels连接到本地主机的ssh服务</h1>
-
 <p>在cloudflare托管域名以后，可以使用cloudflare的Tunnels来实现内网穿透，将本地服务暴露到互联网。</p>
 <!-- more -->
 
@@ -1234,6 +1364,138 @@
 </li>
 </ol>
 <p>大功告成，在浏览器地址栏中输入 <code>https://ssh.example.com</code> ，在页面中输入之前设置的允许访问的邮箱，在输入邮箱接收到的验证码，就可以通过浏览器登入本地电脑的ssh服务了。</p>
+<h1 id="连接本地-http-服务">连接本地 http 服务</h1>
+<p>整体流程和上面相同，只是应用配置那里，选 http, 以及 本地端口号：</p>
+<p><a class="glightbox" href="../%E7%BC%96%E7%A8%8B/attachments/Pasted%20image%2020260424143059.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../%E7%BC%96%E7%A8%8B/attachments/Pasted%20image%2020260424143059.png" /></a></p>
+<h1 id="协议配置">协议配置</h1>
+<p>cloudflared 默认使用 quic 协议，不可用时切换到 http2 协议。
+国内复杂的网络环境下，quic 经常失败，这里手动将协议直接指定为HTTP2。</p>
+<h2 id="cloudflared-协议设置说明">Cloudflared 协议设置说明</h2>
+<p>cloudflared 与 Cloudflare Edge 之间的连接协议支持以下几种：</p>
+<h3 id="1-默认行为">1. 默认行为</h3>
+<p>cloudflared 默认使用：</p>
+<ul>
+<li>QUIC（基于 UDP，HTTP/3）</li>
+</ul>
+<p>如果 QUIC 不可用，会自动回退到：</p>
+<ul>
+<li>HTTP/2（基于 TCP）</li>
+</ul>
+<hr />
+<h3 id="2-手动指定协议">2. 手动指定协议</h3>
+<p>可以通过参数或 config.yml 指定协议：</p>
+<h4 id="方法一命令行">方法一：命令行</h4>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>cloudflared<span class="w"> </span>tunnel<span class="w"> </span>run<span class="w"> </span>&lt;tunnel-name&gt;<span class="w"> </span>--protocol<span class="w"> </span>http2
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="sb">````</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="c1">#### 方法二：config.yml</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>普通用户的话<span class="w"> </span><span class="sb">`</span>config.yml<span class="sb">`</span><span class="w"> </span>在<span class="w"> </span><span class="sb">`</span>~/.cloudflared/config.yml<span class="sb">`</span><span class="w"> </span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>以管理员身份安装服务的话，读取的是<span class="w"> </span><span class="sb">`</span>C:<span class="se">\W</span>indows<span class="se">\S</span>ystem32<span class="se">\c</span>onfig<span class="se">\s</span>ystemprofile<span class="se">\.</span>cloudflared<span class="se">\c</span>onfig.yml<span class="sb">`</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="sb">```</span>yaml
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>protocol:<span class="w"> </span>http2
+</span></code></pre></div>
+<hr />
+<h3 id="3-可选协议类型">3. 可选协议类型</h3>
+<table>
+<thead>
+<tr>
+<th>协议</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>quic</td>
+<td>默认协议，基于 UDP，延迟低</td>
+</tr>
+<tr>
+<td>http2</td>
+<td>基于 TCP，更稳定</td>
+</tr>
+<tr>
+<td>auto</td>
+<td>自动选择（默认行为）</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="4-使用建议">4. 使用建议</h3>
+<ul>
+<li>
+<p>网络环境良好（低丢包）：</p>
+<ul>
+<li>使用 QUIC（默认）</li>
+</ul>
+</li>
+<li>
+<p>网络受限（公司网络 / UDP 被禁）：</p>
+<ul>
+<li>使用 HTTP/2</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h3 id="5-常见问题">5. 常见问题</h3>
+<h4 id="quic-连接失败">QUIC 连接失败</h4>
+<p>表现：</p>
+<ul>
+<li>
+<p>连接不稳定</p>
+</li>
+<li>
+<p>Tunnel 频繁断开</p>
+</li>
+</ul>
+<p>解决：</p>
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nt">protocol</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http2</span>
+</span></code></pre></div>
+<hr />
+<h3 id="6-日志确认">6. 日志确认</h3>
+<p>成功连接后日志中会显示：</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>protocol=http2
+</span></code></pre></div>
+<p>或：</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>protocol=quic
+</span></code></pre></div>
+<hr />
+<h2 id="为什么用-更low的http2呢">🧠为什么用 更low的http2呢？</h2>
+<ol>
+<li>
+<p><strong>UDP 容易被限速/丢包</strong></p>
+<ul>
+<li>
+<p>运营商和网络设备对 UDP 不友好</p>
+</li>
+<li>
+<p>QUIC（基于 UDP）更容易抖动或断连</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>NAT / 防火墙不稳定</strong></p>
+<ul>
+<li>
+<p>UDP 连接状态容易丢失</p>
+</li>
+<li>
+<p>长连接更容易被中断</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>跨境链路优化偏向 TCP</strong></p>
+<ul>
+<li>
+<p>HTTPS（HTTP/2）基于 TCP</p>
+</li>
+<li>
+<p>已被长期优化，更稳定</p>
+</li>
+</ul>
+</li>
+</ol>
 
 
 
