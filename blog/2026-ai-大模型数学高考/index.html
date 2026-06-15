@@ -6,17 +6,15 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="解决 Gemini CLI 在 Windows 11 环境下调用 shell 时出现中文乱码的问题。">
+        <meta name="description" content="🐎出门搔白首，若负平生志🗡">
       
       
       
-        <link rel="canonical" href="https://blog.myshawn.com/blog/gemini-cli-windows-11-%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/">
+        <link rel="canonical" href="https://blog.myshawn.com/blog/2026-ai-%E5%A4%A7%E6%A8%A1%E5%9E%8B%E6%95%B0%E5%AD%A6%E9%AB%98%E8%80%83/">
       
       
-        <link rel="prev" href="../windows-terminal-%E5%88%86%E5%B1%8F%E4%B8%8E%E8%B0%83%E6%95%B4%E5%BF%AB%E6%8D%B7%E9%94%AE/">
+        <link rel="prev" href="../gemini-cli-windows-11-%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/">
       
-      
-        <link rel="next" href="../2026-ai-%E5%A4%A7%E6%A8%A1%E5%9E%8B%E6%95%B0%E5%AD%A6%E9%AB%98%E8%80%83/">
       
       
         <link rel="alternate" type="application/rss+xml" title="RSS 订阅" href="../../feed_rss_created.xml">
@@ -27,7 +25,7 @@
     
     
       
-        <title>Gemini CLI Windows 11 中文乱码解决方案 - Shawn</title>
+        <title>2026 AI 大模型数学高考 - Shawn</title>
       
     
     
@@ -92,7 +90,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#问题描述" class="md-skip">
+        <a href="#测试方案" class="md-skip">
           跳转至
         </a>
       
@@ -125,7 +123,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Gemini CLI Windows 11 中文乱码解决方案
+              2026 AI 大模型数学高考
             
           </span>
         </div>
@@ -1036,6 +1034,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -1044,69 +1044,36 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#问题描述" class="md-nav__link">
+  <a href="#主要测试点" class="md-nav__link">
     <span class="md-ellipsis">
-      问题描述
+      主要测试点
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#原因分析" class="md-nav__link">
+  <a href="#规则" class="md-nav__link">
     <span class="md-ellipsis">
-      原因分析
+      规则
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#解决方案配置-powershell-profile" class="md-nav__link">
+  <a href="#解题提示词" class="md-nav__link">
     <span class="md-ellipsis">
-      解决方案：配置 PowerShell Profile
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="解决方案：配置 PowerShell Profile">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-询问-gemini-cli-使用的-powershell-版本" class="md-nav__link">
-    <span class="md-ellipsis">
-      1. 询问 Gemini CLI 使用的 PowerShell 版本
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-写入编码配置" class="md-nav__link">
-    <span class="md-ellipsis">
-      2. 写入编码配置
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#验证效果" class="md-nav__link">
-    <span class="md-ellipsis">
-      验证效果
+      解题提示词
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#备选方案系统级-utf-8-beta" class="md-nav__link">
+  <a href="#阅卷提示词" class="md-nav__link">
     <span class="md-ellipsis">
-      备选方案：系统级 UTF-8 (Beta)
+      阅卷提示词
     </span>
   </a>
   
@@ -1137,6 +1104,25 @@
               </div>
             </div>
             
+              <div class="md-post__authors md-typeset">
+                
+                  <div class="md-profile md-post__profile">
+                    <span class="md-author md-author--long">
+                      <img src="../../images/sleepy-cat.png" alt="Shawn">
+                    </span>
+                    <span class="md-profile__description">
+                      <strong>
+                        
+                          <a href="https://myshawn.com/about">Shawn</a>
+                        
+                      </strong>
+                      <br>
+                      出门搔白首，若负平生志🐎🗡
+                    </span>
+                  </div>
+                
+              </div>
+            
             <ul class="md-post__meta md-nav__list">
               <li class="md-nav__item md-nav__item--section">
                 <div class="md-post__title">
@@ -1149,7 +1135,7 @@
                     <li class="md-nav__item">
                       <div class="md-nav__link">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 19H5V8h14m-3-7v2H8V1H6v2H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-1V1m-1 11h-5v5h5z"/></svg>
-                        <time datetime="2026-05-14 00:00:00+00:00" class="md-ellipsis">2026年5月14日星期四</time>
+                        <time datetime="2026-06-15 09:25:02+00:00" class="md-ellipsis">2026年6月15日星期一</time>
                       </div>
                     </li>
                     
@@ -1172,7 +1158,7 @@
                           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7z"/></svg>
                           <span class="md-ellipsis">
                             
-                              需要 1 分钟阅读时间
+                              需要 5 分钟阅读时间
                             
                           </span>
                         </div>
@@ -1199,32 +1185,14 @@
       
       
       
-        <span class="md-tag">Gemini-CLI</span>
-      
-    
-      
-      
-      
-        <span class="md-tag">PowerShell</span>
-      
-    
-      
-      
-      
-        <span class="md-tag">Windows</span>
-      
-    
-      
-      
-      
-        <span class="md-tag">编码</span>
+        <span class="md-tag">AI</span>
       
     
   </nav>
 
 
   
-    <a href="https://github.com/xiaodaxia-2008/xiaodaxia-2008.github.io/edit/blog/docs/blog/posts/AI/GeminiCLI_ChineseEncodingFix.md" title="编辑此页" class="md-content__button md-icon">
+    <a href="https://github.com/xiaodaxia-2008/xiaodaxia-2008.github.io/edit/blog/docs/blog/posts/AI/2026 AI 大模型数学高考.md" title="编辑此页" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75z"/></svg>
     </a>
@@ -1233,73 +1201,324 @@
     
       
     
-    <a href="https://github.com/xiaodaxia-2008/xiaodaxia-2008.github.io/raw/blog/docs/blog/posts/AI/GeminiCLI_ChineseEncodingFix.md" title="查看本页的源代码" class="md-content__button md-icon">
+    <a href="https://github.com/xiaodaxia-2008/xiaodaxia-2008.github.io/raw/blog/docs/blog/posts/AI/2026 AI 大模型数学高考.md" title="查看本页的源代码" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0 8a5 5 0 0 1-5-5 5 5 0 0 1 5-5 5 5 0 0 1 5 5 5 5 0 0 1-5 5m0-12.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5"/></svg>
     </a>
   
 
 
-  <h1>Gemini CLI Windows 11 中文乱码解决方案</h1>
-
-<p>在使用 Gemini CLI 时，对话界面通常显示正常，但在调用 
-un_shell_command 执行涉及中文输出的命令时，控制台可能会出现乱码。这是由于工具的 UTF-8 输出与 PowerShell 默认的 GBK 编码不匹配导致的。</p>
+<p><a class="glightbox" href="../AI/attachments/AI-math-gaokao.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../AI/attachments/AI-math-gaokao.png" /></a></p>
+<hr />
+<ul>
+<li>2026 AI 大模型数学高考，结果出人意料：有人考满分，有人不及格</li>
+<li>国外模型是否还遥遥领先？</li>
+<li>谁才是真正的中国一模？</li>
+<li>能力差距逐渐缩小，算力差距何时补齐？</li>
+</ul>
 <!-- more -->
 
-<h2 id="问题描述">问题描述</h2>
-<p>在使用 Gemini CLI 的过程中，AI 生成的回复中文显示完美，但一旦让其调用 Shell 执行命令（例如查看目录、编译报错信息等），返回的内容就会变成无法辨认的乱码。对于在 Windows 环境下进行开发的同学，这是一个非常普遍的痛点。</p>
-<h2 id="原因分析">原因分析</h2>
-<p>Windows 版本的 Gemini CLI 默认调用 powershell.exe 来执行系统命令。乱码的根源在于：
-- <strong>编码冲突</strong>：Gemini CLI 及大多数现代开源工具均采用 <strong>UTF-8</strong> 编码。
-- <strong>默认环境限制</strong>：Windows PowerShell (5.x) 或默认配置下的 PowerShell 7 在中文系统里通常沿用 <strong>GBK (CP936)</strong> 编码。
-- <strong>解析错位</strong>：当 Shell 尝试用 GBK 逻辑去解析 UTF-8 的数据流时，就会产生乱码。</p>
-<h2 id="解决方案配置-powershell-profile">解决方案：配置 PowerShell Profile</h2>
-<p>通过修改 PowerShell 的配置文件（Profile），我们可以确保每次 Shell 启动时都自动切换到正确的编码环境。</p>
-<h3 id="1-询问-gemini-cli-使用的-powershell-版本">1. 询问 Gemini CLI 使用的 PowerShell 版本</h3>
-<p>最直接的方法是让 Gemini CLI 帮你查询。在对话中输入：</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>你当前使用的是哪个 PowerShell 版本？运行 $PSVersionTable 告诉我结果。
-</span></code></pre></div>
-<p>它会调用 Shell 命令并返回类似如下信息：</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>Name                           Value
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>----                           -----
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>PSVersion                      5.1.22621.4249
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>PSCompatibleVersions           {1.0, 2.0, 3.0, 4.0...}
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>BuildVersion                   10.0.22621.4249
-</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>CLRVersion                     4.0.30319.42000
-</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>Platform                       Win32NT
-</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>PSComposition                  
-</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>PSWorkflowType                 
-</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>PSRemotingProtocolVersion      2.4
-</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>SerializationVersion           1.1.0.1
-</span></code></pre></div>
-<p>根据返回的 <strong>PSVersion</strong>，在本地打开一个相同版本的 PowerShell，然后在其中执行：</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>echo $PROFILE
-</span></code></pre></div>
-<p>这会直接输出当前版本的 Profile 配置文件路径。</p>
-<h3 id="2-写入编码配置">2. 写入编码配置</h3>
-<p>使用你喜欢的编辑器（如 Notepad 或 VS Code）打开该文件：</p>
-<p><div class="language-powershell highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">notepad</span> <span class="nv">$PROFILE</span>
-</span></code></pre></div>
-在文件末尾添加以下三行核心配置：</p>
-<p><div class="language-powershell highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="c"># 强制指定控制台输入、输出以及全局输出编码为 UTF-8</span>
-</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="no">[Console]</span><span class="p">::</span><span class="n">InputEncoding</span> <span class="p">=</span> <span class="no">[System.Text.Encoding]</span><span class="p">::</span><span class="n">UTF8</span>
-</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="no">[Console]</span><span class="p">::</span><span class="n">OutputEncoding</span> <span class="p">=</span> <span class="no">[System.Text.Encoding]</span><span class="p">::</span><span class="n">UTF8</span>
-</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="nv">$OutputEncoding</span> <span class="p">=</span> <span class="no">[System.Text.Encoding]</span><span class="p">::</span><span class="n">UTF8</span>
-</span></code></pre></div>
-<em>注：对于 PowerShell 5.1 来说，最后一行 $OutputEncoding 是确保捕获外部命令输出不乱码的关键。</em></p>
-<h2 id="验证效果">验证效果</h2>
-<p>保存并关闭配置文件后，<strong>重启 Gemini CLI</strong> 或重新开启一个会话。执行一个带有中文输出的命令进行验证：</p>
-<div class="language-powershell highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="nb">dir </span><span class="p">|</span> <span class="n">findstr</span> <span class="s2">&quot;文档&quot;</span>
-</span></code></pre></div>
 <hr />
-<h2 id="备选方案系统级-utf-8-beta">备选方案：系统级 UTF-8 (Beta)</h2>
-<p>如果上述 Profile 方案在某些极端情况下失效，可以尝试 Windows 提供的系统级支持：
-1. 打开 <strong>控制面板</strong> &gt; <strong>区域</strong>。
-2. 切换至 <strong>管理</strong> 选项卡，点击 <strong>更改系统区域设置</strong>。
-3. 勾选 <strong>Beta: 使用 Unicode UTF-8 提供全球语言支持</strong>。
-4. 重启计算机以生效。</p>
+<h1 id="测试方案"><strong>测试方案</strong></h1>
+<h2 id="主要测试点">主要测试点</h2>
+<ul>
+<li>
+<p>语言理解能力</p>
+</li>
+<li>
+<p>大模型数学推理能力</p>
+</li>
+<li>
+<p>对 latext 公式的理解</p>
+</li>
+</ul>
 <hr />
-<p><em>2026-5-14</em></p>
+<h2 id="规则">规则</h2>
+<ul>
+<li>
+<p>所有大模型测试采用相同提示词</p>
+</li>
+<li>
+<p>试题选自2026数学高考全国卷1，排除了有示意图以及需要证明过程的解答题，<strong>总计100分</strong>，每道小题都明确了分数</p>
+<ul>
+<li>
+<p>单选8道题，每题5分，共40分</p>
+</li>
+<li>
+<p>多选3道题，每题6分，共18分，漏选得3分，错选不得分</p>
+</li>
+<li>
+<p>填空题3道，每题5分，共15；其中13题是两个空，每空算2.5分</p>
+</li>
+<li>
+<p>解答题两道，5小问，前4问每题5分，最后一问7分，共27分</p>
+</li>
+</ul>
+</li>
+<li>
+<p>题目已经转化为markdown，公式使用 latex，试题及答案都经过仔细核对</p>
+</li>
+<li>
+<p>第一轮做考生，进行答题</p>
+</li>
+<li>
+<p>第二轮做阅卷老师，自己给自己评分</p>
+</li>
+</ul>
+<hr />
+<h2 id="解题提示词">解题提示词</h2>
+<div class="language-markdown highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="gu">## 一、单选题</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>本题共 8 小题，每小题 5 分，共 40 分，每小题只有一个选项符合要求。
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="k">1.</span> 样本数据 $6,8,4,5,12$ 的中位数为
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">   </span><span class="k">-</span><span class="w"> </span>A. $5$
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">   </span><span class="k">-</span><span class="w"> </span>B. $6$
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">   </span><span class="k">-</span><span class="w"> </span>C. $8$
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">   </span><span class="k">-</span><span class="w"> </span>D. $9$
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="k">2.</span> 已知平面向量 $\mathbf a,\mathbf b$ 不共线，且 $2\mathbf a+y\mathbf b=x\mathbf a-3\mathbf b$，则
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">   </span><span class="k">-</span><span class="w"> </span>A. $x=2,\ y=-3$
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">   </span><span class="k">-</span><span class="w"> </span>B. $x=-2,\ y=3$
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="w">   </span><span class="k">-</span><span class="w"> </span>C. $x=2,\ y=3$
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="w">   </span><span class="k">-</span><span class="w"> </span>D. $x=-2,\ y=-3$
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="k">3.</span> 已知集合 $A=\left\{\sin\left(\frac{7\pi}{6}\right),\cos\left(\frac{5\pi}{3}\right),\tan\left(\frac{5\pi}{4}\right)\right\}$，$B=\left\{-\frac{\sqrt3}{2},-\frac12,1\right\}$，则 $A\cap B=$
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="w">   </span><span class="k">-</span><span class="w"> </span>A. $\left\{-\frac{\sqrt3}{2},-\frac12\right\}$
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="w">   </span><span class="k">-</span><span class="w"> </span>B. $\left\{-\frac{\sqrt3}{2},1\right\}$
+</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="w">   </span><span class="k">-</span><span class="w"> </span>C. $\left\{-\frac12,1\right\}$
+</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="w">   </span><span class="k">-</span><span class="w"> </span>D. $\left\{-\frac{\sqrt3}{2},-\frac12,1\right\}$
+</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>
+</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a><span class="k">4.</span> 曲线 $y=5x+8\ln x$ 在点 $(1,5)$ 的切线方程为
+</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a><span class="w">   </span><span class="k">-</span><span class="w"> </span>A. $y=3x+2$
+</span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a><span class="w">   </span><span class="k">-</span><span class="w"> </span>B. $y=5x$
+</span><span id="__span-0-26"><a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a><span class="w">   </span><span class="k">-</span><span class="w"> </span>C. $y=8x-3$
+</span><span id="__span-0-27"><a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a><span class="w">   </span><span class="k">-</span><span class="w"> </span>D. $y=13x-8$
+</span><span id="__span-0-28"><a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a>
+</span><span id="__span-0-29"><a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a><span class="k">5.</span> 已知抛物线 $C_1:y^2=2p_1x\ (p_1&gt;0)$ 和 $C_2:x^2=2p_2y\ (p_2&gt;0)$ 均经过点 $(4,8)$，则 $C_1$ 的焦点与 $C_2$ 的焦点之间的距离为
+</span><span id="__span-0-30"><a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a><span class="w">   </span><span class="k">-</span><span class="w"> </span>A. $12$
+</span><span id="__span-0-31"><a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a><span class="w">   </span><span class="k">-</span><span class="w"> </span>B. $4\sqrt5$
+</span><span id="__span-0-32"><a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a><span class="w">   </span><span class="k">-</span><span class="w"> </span>C. $6$
+</span><span id="__span-0-33"><a id="__codelineno-0-33" name="__codelineno-0-33" href="#__codelineno-0-33"></a><span class="w">   </span><span class="k">-</span><span class="w"> </span>D. $\frac{\sqrt{65}}{2}$
+</span><span id="__span-0-34"><a id="__codelineno-0-34" name="__codelineno-0-34" href="#__codelineno-0-34"></a>
+</span><span id="__span-0-35"><a id="__codelineno-0-35" name="__codelineno-0-35" href="#__codelineno-0-35"></a><span class="k">6.</span> 已知函数 $f(x)=\frac{x+2}{e^x+a}$ 的最大值为 $1$，则 $a=$
+</span><span id="__span-0-36"><a id="__codelineno-0-36" name="__codelineno-0-36" href="#__codelineno-0-36"></a><span class="w">   </span><span class="k">-</span><span class="w"> </span>A. $\frac12$
+</span><span id="__span-0-37"><a id="__codelineno-0-37" name="__codelineno-0-37" href="#__codelineno-0-37"></a><span class="w">   </span><span class="k">-</span><span class="w"> </span>B. $1$
+</span><span id="__span-0-38"><a id="__codelineno-0-38" name="__codelineno-0-38" href="#__codelineno-0-38"></a><span class="w">   </span><span class="k">-</span><span class="w"> </span>C. $\frac32$
+</span><span id="__span-0-39"><a id="__codelineno-0-39" name="__codelineno-0-39" href="#__codelineno-0-39"></a><span class="w">   </span><span class="k">-</span><span class="w"> </span>D. $2$
+</span><span id="__span-0-40"><a id="__codelineno-0-40" name="__codelineno-0-40" href="#__codelineno-0-40"></a>
+</span><span id="__span-0-41"><a id="__codelineno-0-41" name="__codelineno-0-41" href="#__codelineno-0-41"></a><span class="k">7.</span> 一百零八塔位于宁夏回族自治区青铜峡市，以其独特的建筑格局和深远的历史文化闻名遐迩，该塔群共有 108 座塔，依山势自上而下排成 12 行，将第 $i$ 行中塔的座数记为 $a_i\ (i=1,2,\cdots,12)$，其中 $a_1=1$，$a_2=a_3=3$，$a_4=a_5=5$，且 $a_6,a_7,\cdots,a_{12}$ 是一个首项为 $7$、公差为 $2$ 的等差数列，将 $a_1,a_2,\cdots,a_{12}$ 分为 6 组，每组 2 个数，使得每组的 2 个数之和可构成一个项数为 6 且公差为 $d\ (d&gt;0)$ 的等差数列，则 $d=$
+</span><span id="__span-0-42"><a id="__codelineno-0-42" name="__codelineno-0-42" href="#__codelineno-0-42"></a><span class="w">   </span><span class="k">-</span><span class="w"> </span>A. $2$
+</span><span id="__span-0-43"><a id="__codelineno-0-43" name="__codelineno-0-43" href="#__codelineno-0-43"></a><span class="w">   </span><span class="k">-</span><span class="w"> </span>B. $4$
+</span><span id="__span-0-44"><a id="__codelineno-0-44" name="__codelineno-0-44" href="#__codelineno-0-44"></a><span class="w">   </span><span class="k">-</span><span class="w"> </span>C. $6$
+</span><span id="__span-0-45"><a id="__codelineno-0-45" name="__codelineno-0-45" href="#__codelineno-0-45"></a><span class="w">   </span><span class="k">-</span><span class="w"> </span>D. $8$
+</span><span id="__span-0-46"><a id="__codelineno-0-46" name="__codelineno-0-46" href="#__codelineno-0-46"></a>
+</span><span id="__span-0-47"><a id="__codelineno-0-47" name="__codelineno-0-47" href="#__codelineno-0-47"></a><span class="k">8.</span> 设 $U=\{(x_1,x_2,x_3)\mid x<span class="ge">_i\in\{-2,-1,1,2\},\ i=1,2,3\}$ 为空间中 64 个点构成的集合，记 $P=(1,1,1)$，记样本空间 $\Omega=C_</span>U\{P\}$，从 $\Omega$ 中随机取一个点，定义随机变量 $X$ 如下：对 $\Omega$ 中的每个点 $A(x_1,x_2,x_3)$，令 $X(A)=x_1+x_2+x_3$，则 $X$ 的数学期望为
+</span><span id="__span-0-48"><a id="__codelineno-0-48" name="__codelineno-0-48" href="#__codelineno-0-48"></a><span class="w">   </span><span class="k">-</span><span class="w"> </span>A. $-\frac1{21}$
+</span><span id="__span-0-49"><a id="__codelineno-0-49" name="__codelineno-0-49" href="#__codelineno-0-49"></a><span class="w">   </span><span class="k">-</span><span class="w"> </span>B. $-\frac1{63}$
+</span><span id="__span-0-50"><a id="__codelineno-0-50" name="__codelineno-0-50" href="#__codelineno-0-50"></a><span class="w">   </span><span class="k">-</span><span class="w"> </span>C. $0$
+</span><span id="__span-0-51"><a id="__codelineno-0-51" name="__codelineno-0-51" href="#__codelineno-0-51"></a><span class="w">   </span><span class="k">-</span><span class="w"> </span>D. $\frac17$
+</span><span id="__span-0-52"><a id="__codelineno-0-52" name="__codelineno-0-52" href="#__codelineno-0-52"></a>
+</span><span id="__span-0-53"><a id="__codelineno-0-53" name="__codelineno-0-53" href="#__codelineno-0-53"></a><span class="gu">## 二、多选题</span>
+</span><span id="__span-0-54"><a id="__codelineno-0-54" name="__codelineno-0-54" href="#__codelineno-0-54"></a>
+</span><span id="__span-0-55"><a id="__codelineno-0-55" name="__codelineno-0-55" href="#__codelineno-0-55"></a>本题共 3 小题，每小题 6 分，共 18 分。在每小题给出的四个选项中，有多项符合题目要求。全部选对的得 6 分，部分选对的得3分，有选错的得 0 分。
+</span><span id="__span-0-56"><a id="__codelineno-0-56" name="__codelineno-0-56" href="#__codelineno-0-56"></a>
+</span><span id="__span-0-57"><a id="__codelineno-0-57" name="__codelineno-0-57" href="#__codelineno-0-57"></a><span class="k">9.</span> 设 $z=3+2i$，则
+</span><span id="__span-0-58"><a id="__codelineno-0-58" name="__codelineno-0-58" href="#__codelineno-0-58"></a><span class="w">   </span><span class="k">-</span><span class="w"> </span>A. $\bar z=3-2i$
+</span><span id="__span-0-59"><a id="__codelineno-0-59" name="__codelineno-0-59" href="#__codelineno-0-59"></a><span class="w">   </span><span class="k">-</span><span class="w"> </span>B. $|z|=5$
+</span><span id="__span-0-60"><a id="__codelineno-0-60" name="__codelineno-0-60" href="#__codelineno-0-60"></a><span class="w">   </span><span class="k">-</span><span class="w"> </span>C. $z^2=5+12i$
+</span><span id="__span-0-61"><a id="__codelineno-0-61" name="__codelineno-0-61" href="#__codelineno-0-61"></a><span class="w">   </span><span class="k">-</span><span class="w"> </span>D. $\frac{z+3}{z-i}\in\mathbb R$
+</span><span id="__span-0-62"><a id="__codelineno-0-62" name="__codelineno-0-62" href="#__codelineno-0-62"></a>
+</span><span id="__span-0-63"><a id="__codelineno-0-63" name="__codelineno-0-63" href="#__codelineno-0-63"></a><span class="k">10.</span> 在空间中，$A$、$B$ 为两个定点，动点 $C$ 到直线 $AB$ 的距离为 $2$，动点 $D$ 到直线 $AB$ 的距离为 $1$，若二面角 $C-AB-D$ 为 $60^\circ$，则
+</span><span id="__span-0-64"><a id="__codelineno-0-64" name="__codelineno-0-64" href="#__codelineno-0-64"></a><span class="w">    </span><span class="k">-</span><span class="w"> </span>A. $\angle CAD\ge 60^\circ$
+</span><span id="__span-0-65"><a id="__codelineno-0-65" name="__codelineno-0-65" href="#__codelineno-0-65"></a><span class="w">    </span><span class="k">-</span><span class="w"> </span>B. $CD\ge\sqrt3$
+</span><span id="__span-0-66"><a id="__codelineno-0-66" name="__codelineno-0-66" href="#__codelineno-0-66"></a><span class="w">    </span><span class="k">-</span><span class="w"> </span>C. 当 $AB\perp CD$ 时，$CD\perp$ 平面 $ABD$
+</span><span id="__span-0-67"><a id="__codelineno-0-67" name="__codelineno-0-67" href="#__codelineno-0-67"></a><span class="w">    </span><span class="k">-</span><span class="w"> </span>D. 当 $AB\perp$ 平面 $ACD$ 时，$AC\perp AD$
+</span><span id="__span-0-68"><a id="__codelineno-0-68" name="__codelineno-0-68" href="#__codelineno-0-68"></a>
+</span><span id="__span-0-69"><a id="__codelineno-0-69" name="__codelineno-0-69" href="#__codelineno-0-69"></a><span class="k">11.</span> 已知圆 $C_1:(x+1)^2+y^2=1$，圆 $C_2:(x-1)^2+y^2=1$，圆 $C_3:x^2+(y-\sqrt3)^2=1$，直线 $l:y=kx+b$ 与 $C_1,C_2,C_3$ 均有两个交点，记 $l$ 被 $C_1,C_2,C_3$ 截得的弦长分别为 $s_1,s_2,s_3$，则
+</span><span id="__span-0-70"><a id="__codelineno-0-70" name="__codelineno-0-70" href="#__codelineno-0-70"></a><span class="w">    </span><span class="k">-</span><span class="w"> </span>A. $k$ 可以取任意实数
+</span><span id="__span-0-71"><a id="__codelineno-0-71" name="__codelineno-0-71" href="#__codelineno-0-71"></a><span class="w">    </span><span class="k">-</span><span class="w"> </span>B. 满足 $s_1=s_2=s_3$ 的直线 $l$ 共有 3 条
+</span><span id="__span-0-72"><a id="__codelineno-0-72" name="__codelineno-0-72" href="#__codelineno-0-72"></a><span class="w">    </span><span class="k">-</span><span class="w"> </span>C. 满足 $s_1+s_2+s_3=1$ 的直线 $l$ 多于 3 条
+</span><span id="__span-0-73"><a id="__codelineno-0-73" name="__codelineno-0-73" href="#__codelineno-0-73"></a><span class="w">    </span><span class="k">-</span><span class="w"> </span>D. 当 $b=0$ 时，$s_1+s_2+s_3$ 的最大值为 $\frac{2\sqrt{21}}{3}$
+</span><span id="__span-0-74"><a id="__codelineno-0-74" name="__codelineno-0-74" href="#__codelineno-0-74"></a>
+</span><span id="__span-0-75"><a id="__codelineno-0-75" name="__codelineno-0-75" href="#__codelineno-0-75"></a><span class="gu">## 三、填空题</span>
+</span><span id="__span-0-76"><a id="__codelineno-0-76" name="__codelineno-0-76" href="#__codelineno-0-76"></a>
+</span><span id="__span-0-77"><a id="__codelineno-0-77" name="__codelineno-0-77" href="#__codelineno-0-77"></a>本题共 3 小题，每小题 5 分，共 15 分, 其中 13题两空，每空2.5分。
+</span><span id="__span-0-78"><a id="__codelineno-0-78" name="__codelineno-0-78" href="#__codelineno-0-78"></a>
+</span><span id="__span-0-79"><a id="__codelineno-0-79" name="__codelineno-0-79" href="#__codelineno-0-79"></a><span class="k">12.</span> 双曲线 $5x^2-6y^2=1$ 的离心率为 ______。
+</span><span id="__span-0-80"><a id="__codelineno-0-80" name="__codelineno-0-80" href="#__codelineno-0-80"></a>
+</span><span id="__span-0-81"><a id="__codelineno-0-81" name="__codelineno-0-81" href="#__codelineno-0-81"></a><span class="k">13.</span> 已知 $f(x)=2\sin(ax+\theta)\ (a\in\mathbb Z,\ 0\le\theta&lt;2\pi)$ 是偶函数，$f(x)$ 在区间 $\left(0,\frac{\pi}{2}\right)$ 单调递增，则 $\theta=$ ______, $f(\frac{2\pi}{3})=$ ______ 。
+</span><span id="__span-0-82"><a id="__codelineno-0-82" name="__codelineno-0-82" href="#__codelineno-0-82"></a>
+</span><span id="__span-0-83"><a id="__codelineno-0-83" name="__codelineno-0-83" href="#__codelineno-0-83"></a><span class="k">14.</span> 设实数 $q$ 满足：存在数列 $\{a<span class="ge">_n\}$，使得对于任意 $n\in\mathbb N^*$，均有 $a_</span>1+a_2+\cdots+a_{3n}=n^2+n$，且 $\{a<span class="ge">_n\}$ 中有某连续 9 项 $a_</span>k,a_{k+1},\cdots,a_{k+8}$ 是公比为 $q$ 的等比数列，则 $q$ 的最大值为 ______。
+</span><span id="__span-0-84"><a id="__codelineno-0-84" name="__codelineno-0-84" href="#__codelineno-0-84"></a>
+</span><span id="__span-0-85"><a id="__codelineno-0-85" name="__codelineno-0-85" href="#__codelineno-0-85"></a><span class="gu">## 四、解答题</span>
+</span><span id="__span-0-86"><a id="__codelineno-0-86" name="__codelineno-0-86" href="#__codelineno-0-86"></a>
+</span><span id="__span-0-87"><a id="__codelineno-0-87" name="__codelineno-0-87" href="#__codelineno-0-87"></a><span class="k">15.</span> 已知在 $\triangle ABC$ 中，$AB=3$，$BC=2\sqrt{3}$，$\cos B=\dfrac{\sqrt{3}}{3}$。
+</span><span id="__span-0-88"><a id="__codelineno-0-88" name="__codelineno-0-88" href="#__codelineno-0-88"></a>
+</span><span id="__span-0-89"><a id="__codelineno-0-89" name="__codelineno-0-89" href="#__codelineno-0-89"></a>  （1）求 $\cos A$；（5分）
+</span><span id="__span-0-90"><a id="__codelineno-0-90" name="__codelineno-0-90" href="#__codelineno-0-90"></a>
+</span><span id="__span-0-91"><a id="__codelineno-0-91" name="__codelineno-0-91" href="#__codelineno-0-91"></a>  （2）设 $D$，$E$ 两点满足：$D$ 在 $BA$ 的延长线上，$DE \parallel BC$，$AE \perp AC$。若 $DE=\sqrt{6}$，求 $CE$。（5分）
+</span><span id="__span-0-92"><a id="__codelineno-0-92" name="__codelineno-0-92" href="#__codelineno-0-92"></a>
+</span><span id="__span-0-93"><a id="__codelineno-0-93" name="__codelineno-0-93" href="#__codelineno-0-93"></a>
+</span><span id="__span-0-94"><a id="__codelineno-0-94" name="__codelineno-0-94" href="#__codelineno-0-94"></a><span class="k">16.</span> 已知椭圆 $C:\dfrac{x^2}{a^2}+\dfrac{y^2}{b^2}=1(a&gt;b&gt;0)$ 的左焦点为 $F(-1,0)$，离心率为 $\dfrac{1}{2}$。
+</span><span id="__span-0-95"><a id="__codelineno-0-95" name="__codelineno-0-95" href="#__codelineno-0-95"></a>
+</span><span id="__span-0-96"><a id="__codelineno-0-96" name="__codelineno-0-96" href="#__codelineno-0-96"></a>  （1）求 $C$ 的方程；（5分）
+</span><span id="__span-0-97"><a id="__codelineno-0-97" name="__codelineno-0-97" href="#__codelineno-0-97"></a>
+</span><span id="__span-0-98"><a id="__codelineno-0-98" name="__codelineno-0-98" href="#__codelineno-0-98"></a>  （2）设 $O$ 为坐标原点，过 $F$ 且斜率大于 $0$ 的动直线 $l$ 与 $C$ 交于 $P,Q$ 两点，其中 $Q$ 在第三象限，直线 $PO$ 与 $C$ 的另一个交点为 $R$。
+</span><span id="__span-0-99"><a id="__codelineno-0-99" name="__codelineno-0-99" href="#__codelineno-0-99"></a>
+</span><span id="__span-0-100"><a id="__codelineno-0-100" name="__codelineno-0-100" href="#__codelineno-0-100"></a>   （i）若 $\triangle PQR$ 的面积是 $\triangle PFO$ 的面积的 $3$ 倍，求 $l$ 的方程；（5分）
+</span><span id="__span-0-101"><a id="__codelineno-0-101" name="__codelineno-0-101" href="#__codelineno-0-101"></a>
+</span><span id="__span-0-102"><a id="__codelineno-0-102" name="__codelineno-0-102" href="#__codelineno-0-102"></a>   （ii）求 $\tan \angle PQR$ 的最小值。（7分）
+</span><span id="__span-0-103"><a id="__codelineno-0-103" name="__codelineno-0-103" href="#__codelineno-0-103"></a>
+</span><span id="__span-0-104"><a id="__codelineno-0-104" name="__codelineno-0-104" href="#__codelineno-0-104"></a>-----------------
+</span><span id="__span-0-105"><a id="__codelineno-0-105" name="__codelineno-0-105" href="#__codelineno-0-105"></a>
+</span><span id="__span-0-106"><a id="__codelineno-0-106" name="__codelineno-0-106" href="#__codelineno-0-106"></a>解答上述所有题目，直接给出答案，不要输出解题过程
+</span></code></pre></div>
+<h2 id="阅卷提示词">阅卷提示词</h2>
+<div class="language-markdown highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>1-8： BACDDBBA
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>9:  ACD
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>10: BC
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>11: BCD
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>12: $\frac{\sqrt{66}}{6}$
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>13: $\frac{3\pi}{2}$, 1
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>
+</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>14: $\sqrt[3]{\frac{3}{2}}$
+</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>
+</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>15: (1) $cos(A) = \frac{1}{3}$; (2) $|CE| = 3\sqrt{5}$
+</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a>
+</span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>16: (1) C: $\frac{x^2}{4}+\frac{y^2}{3}=1$; (2) i: $l$ 的方程是 $y=\frac{\sqrt{5}}{2}(x+1)$; ii: $\tan \angle PQR$ 最小值是 $4\sqrt{3}
+</span><span id="__span-1-18"><a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a>
+</span><span id="__span-1-19"><a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a>上面是参考答案，你根据参考答案对自己之前的解答进行检查，并且根据评分标准给每道题打分（多选题中漏选得一半分，错选不得分）。
+</span><span id="__span-1-20"><a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a>不需要对比分析解题过程，只需要列出一个对比表格，包含：题号、参考答案、我的答案、是否正确、该题得分。
+</span><span id="__span-1-21"><a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a>最后输出得分统计：`{我的模型名称}：{我的总得分}`
+</span></code></pre></div>
+<h1 id="参赛模型与成绩">参赛模型与成绩</h1>
+<table>
+<thead>
+<tr>
+<th>大模型</th>
+<th>结果</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://chatgpt.com">ChatGPT</a></td>
+<td>94</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://gemini.google.com">Gemini</a> 3.5 Flash</td>
+<td>51</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://gemini.google.com">Gemini</a> 3.1 Pro</td>
+<td>97</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://www.doubao.com">豆包</a> 快速模式</td>
+<td>41</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://www.doubao.com">豆包</a> 深度思考</td>
+<td>70</td>
+<td>两道解答题没有解答</td>
+</tr>
+<tr>
+<td><a href="https://kimi.moonshot.cn">Kimi</a> K2.6 快速</td>
+<td>44</td>
+<td>评分失误</td>
+</tr>
+<tr>
+<td><a href="https://kimi.moonshot.cn">Kimi</a> K2.6 思考</td>
+<td>94</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://agent.minimaxi.com/">MiniMax</a> M3 快速</td>
+<td>65</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://agent.minimaxi.com/">MiniMax</a> M3 思考</td>
+<td>94</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://www.qianwen.com/">千问</a> qwen-3.7-max 快速</td>
+<td>42</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://www.qianwen.com/">千问</a> qwen-3.7-max 思考</td>
+<td>55.5</td>
+<td>说自己模型是Claude，第一次考了46</td>
+</tr>
+<tr>
+<td><a href="https://chatglm.cn">智谱清言</a> glm-5.1 快速</td>
+<td>31</td>
+<td>篡改参考答案，评分严重失误</td>
+</tr>
+<tr>
+<td><a href="https://chatglm.cn">智谱清言</a> glm-5.1 思考</td>
+<td>78</td>
+<td>评分失误</td>
+</tr>
+<tr>
+<td><a href="https://aistudio.xiaomimimo.com/">小米 Mimo-V2.5-Pro</a></td>
+<td>94</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://yuanbao.tencent.com">腾讯元宝</a> HY3 快速</td>
+<td>49</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://yuanbao.tencent.com">腾讯元宝</a> HY3 思考</td>
+<td>56</td>
+<td>评分严重失误</td>
+</tr>
+<tr>
+<td><a href="https://chat.deepseek.com/">deepseek</a> deepseek-v4-pro 快速</td>
+<td>59.5</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://chat.deepseek.com/">deepseek</a> deepseek-v4-pro 思考</td>
+<td>100</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://chat.deepseek.com/">deepseek</a> deepseek-v4-flash 快速</td>
+<td>52</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://chat.deepseek.com/">deepseek</a> deepseek-v4-flash 思考</td>
+<td>100</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>从最终结果来看，可以总结如下：
+- deepseek-v4-pro、kimi2.6、GLM5.1和Gemini3.1-Pro、GPT5.5属于第一梯队。 
+- 但是deepseek-v4-pro、kimi2.6、GLM5.1速度没法和国外的比，国外的基本三分钟以内就出来了，国产开了思考模式，基本都10分钟以上。
+- MiniMax-M3、小米Mimo-V2.5-Pro发挥不稳定，容易出现评分错误。 
+- 各家的快速模式，基本都不及格。 
+- 千问qwen-3.7-max思考模式，测了两次都不及格，很不符合预期。 
+- 腾讯Hy3开了思考模式也不及格，本来也没报很大期待。 
+- 豆包思考模式能力可以，但是时间太长了，基本等不起。 </p>
+<p>最终我觉得如果用于编程这类注重数学推理能力的任务时，国产里面推荐deepseek、kimi。</p>
+<p><em>2026-06-15 09:25:02</em></p>
 
 
 
@@ -1389,7 +1608,7 @@ un_shell_command 执行涉及中文输出的命令时，控制台可能会出现
       <nav class="md-footer__inner md-grid" aria-label="页脚" >
         
           
-          <a href="../windows-terminal-%E5%88%86%E5%B1%8F%E4%B8%8E%E8%B0%83%E6%95%B4%E5%BF%AB%E6%8D%B7%E9%94%AE/" class="md-footer__link md-footer__link--prev" aria-label="上一页: Windows Terminal 分屏与调整快捷键">
+          <a href="../gemini-cli-windows-11-%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/" class="md-footer__link md-footer__link--prev" aria-label="上一页: Gemini CLI Windows 11 中文乱码解决方案">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -1399,27 +1618,11 @@ un_shell_command 执行涉及中文输出的命令时，控制台可能会出现
                 上一页
               </span>
               <div class="md-ellipsis">
-                Windows Terminal 分屏与调整快捷键
+                Gemini CLI Windows 11 中文乱码解决方案
               </div>
             </div>
           </a>
         
-        
-          
-          <a href="../2026-ai-%E5%A4%A7%E6%A8%A1%E5%9E%8B%E6%95%B0%E5%AD%A6%E9%AB%98%E8%80%83/" class="md-footer__link md-footer__link--next" aria-label="下一页: 2026 AI 大模型数学高考">
-            <div class="md-footer__title">
-              <span class="md-footer__direction">
-                下一页
-              </span>
-              <div class="md-ellipsis">
-                2026 AI 大模型数学高考
-              </div>
-            </div>
-            <div class="md-footer__button md-icon">
-              
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
-            </div>
-          </a>
         
       </nav>
     
